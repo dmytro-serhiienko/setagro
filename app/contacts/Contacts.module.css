@@ -5,8 +5,8 @@
 /* Hero */
 .hero {
   position: relative;
-  height: 60vh;
-  min-height: 350px;
+  min-height: 60vh;
+  min-height: 450px;
   background: url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover;
   display: flex;
   align-items: center;

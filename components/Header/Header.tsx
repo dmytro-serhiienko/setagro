@@ -75,7 +75,7 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <Link href="/contacts" className={css.ctaButton}>
-            Звязатись з нами
+            Звʼязатись з нами
           </Link>
 
           {/* Burger */}
@@ -127,7 +127,7 @@ export default function Header() {
             className={css.ctaMobile}
             onClick={() => setMenuOpen(false)}
           >
-            Звязатись з нами
+            Звʼязатись з нами
           </Link>
         </div>
       </div>

@@ -50,6 +50,7 @@ export default function GsapInit() {
             stagger: 0.18,
             ease: heroEase,
             delay: 0.15,
+            clearProps: "opacity,transform",
           });
         });
         // ── HERO IMAGE (fade from right, no scroll) ─────────────────────────
@@ -63,6 +64,7 @@ export default function GsapInit() {
             duration: 1.2,
             ease: heroEase,
             delay: 0.35,
+            clearProps: "opacity,transform",
           });
         }
         // ── FADE UP ────────────────────────────────────────────────────────
@@ -74,6 +76,7 @@ export default function GsapInit() {
             y: 0,
             duration: 0.9,
             ease,
+            clearProps: "opacity,transform",
             scrollTrigger: {
               trigger: el,
               start: "top 88%",
@@ -93,6 +96,7 @@ export default function GsapInit() {
             x: 0,
             duration: 0.95,
             ease,
+            clearProps: "opacity,transform",
             scrollTrigger: {
               trigger: el,
               start: "top 85%",
@@ -112,6 +116,7 @@ export default function GsapInit() {
             x: 0,
             duration: 0.95,
             ease,
+            clearProps: "opacity,transform",
             scrollTrigger: {
               trigger: el,
               start: "top 85%",
@@ -135,6 +140,7 @@ export default function GsapInit() {
             duration: 0.85,
             stagger: 0.12,
             ease,
+            clearProps: "opacity,transform",
             scrollTrigger: {
               trigger: container,
               start: "top 86%",
@@ -153,6 +159,7 @@ export default function GsapInit() {
             opacity: 1,
             duration: 1.15,
             ease,
+            clearProps: "opacity,clipPath",
             scrollTrigger: {
               trigger: el,
               start: "top 82%",
