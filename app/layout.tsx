@@ -6,6 +6,7 @@ import ScrollTop from "@/components/ui/ScrollTop";
 import { SmoothScroll } from "@/components/ui/SmoothScroll/SmoothScroll";
 import GsapInit from "@/components/ui/Gsap/Gsap";
 import Footer from "@/components/Footer/Footer";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,9 +33,9 @@ export default function RootLayout({
     <html
       lang="uk"
       suppressHydrationWarning
-      className={`${inter.variable} ${unbounded.variable} h-full antialiased`}
+      className={`${inter.variable} ${unbounded.variable} antialiased`}
     >
-      <link rel="shortcut icon" href="/fav.png" type="image/x-icon" />
+      <link rel="shortcut icon" href="/images/fav.png" type="image/x-icon" />
       <body>
         <Header />
         <SmoothScroll>
@@ -43,6 +44,7 @@ export default function RootLayout({
           <Footer />
         </SmoothScroll>
         <ScrollTop />
+        <Toaster position="bottom-right" richColors />
       </body>
     </html>
   );

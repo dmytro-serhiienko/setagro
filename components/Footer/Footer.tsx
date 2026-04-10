@@ -23,16 +23,18 @@ export default function Footer() {
 
           <div className={css.nav}>
             <h4 className={css.heading}>Навігація</h4>
-            <Link href="/about">Про нас</Link>
-            {/* <Link href="/services">Послуги</Link> */}
+            <Link href="/">Головна</Link>
+            <Link href="/#about">Про нас</Link>
             <Link href="/ammonia">Безводний аміак</Link>
             <Link href="/equipment">Техніка</Link>
+            <Link href="/news">Новини</Link>
+            <Link href="/vacancies">Вакансії</Link>
             <Link href="/contacts">Контакти</Link>
           </div>
 
           <div className={css.contacts}>
             <h4 className={css.heading}>Контакти</h4>
-            <a href="mailto:setagro09@gmail.com">setagro09@gmail.com</a>
+            <a href="mailto:setagro09@gmail.com">ua.setagro@gmail.com</a>
             <a href="tel:+380674455152">+38 (067) 445-51-52</a>
             {/* <p>Україна, Румунія, Молдова, Болгарія</p> */}
           </div>
@@ -58,9 +60,7 @@ export default function Footer() {
             © {currentYear} SETAGRO. Всі права захищено.
           </p>
           <div className={css.legal}>
-            <Link href="/privacy">Політика конфіденційності</Link>
-            <span className={css.dot}>•</span>
-            <Link href="/terms">Публічна оферта</Link>
+            <Link href="/privacy-policy">Політика конфіденційності</Link>
           </div>
         </div>
       </div>

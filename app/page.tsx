@@ -10,6 +10,9 @@ import { MdOutlineScience } from "react-icons/md";
 import { RiTeamLine } from "react-icons/ri";
 import { useState } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const slides = [
   { src: "/images/gallery/work1.jpg" },
@@ -51,7 +54,7 @@ export default function Hero() {
         </div>
         <div className={css.imageWrapper} data-gsap="hero-img">
           <Image
-            src="/Nik.png"
+            src="/images/hero/Nik.png"
             alt="Hero Image"
             width={600}
             height={600}
@@ -112,6 +115,7 @@ export default function Hero() {
         </div>
       </section>
 
+      {/* РОБОТИ */}
       <section className={css.gallerySection} id="gallery">
         <div className={css.container}>
           <div className={css.textHeader} data-gsap="stagger">
@@ -124,26 +128,46 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* ── ФОТО СІТКА ── */}
-          <div className={css.photoGrid} data-gsap="stagger">
-            {slides.map((slide, i) => (
-              <div
-                key={i}
-                className={css.galleryImgWrapper}
-                onClick={() => setIndex(i)}
-              >
-                <Image
-                  src={slide.src}
-                  alt={`Галерея фото ${i + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className={css.imageItem}
-                />
-                <div className={css.overlayHover}>
-                  <span>Переглянути</span>
-                </div>
-              </div>
-            ))}
+          {/* ── ФОТО СВАЙПЕР ── */}
+          <div className={css.swiperWrap} data-gsap="fade-up">
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              speed={3500}
+              loop
+              allowTouchMove={false}
+              spaceBetween={16}
+              breakpoints={{
+                0: { slidesPerView: 1.2 },
+                640: { slidesPerView: 2.2 },
+                1024: { slidesPerView: 3.2 },
+              }}
+              className={css.swiper}
+            >
+              {slides.map((slide, i) => (
+                <SwiperSlide key={i}>
+                  <div
+                    className={css.galleryImgWrapper}
+                    onClick={() => setIndex(i)}
+                  >
+                    <Image
+                      src={slide.src}
+                      alt={`Галерея фото ${i + 1}`}
+                      fill
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                      className={css.imageItem}
+                    />
+                    <div className={css.overlayHover}>
+                      <span>Переглянути</span>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           <Lightbox

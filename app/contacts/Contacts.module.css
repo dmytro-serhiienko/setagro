@@ -14,6 +14,7 @@
   text-align: center;
   color: white;
 }
+
 .overlay {
   position: absolute;
   inset: 0;
@@ -23,6 +24,7 @@
     rgba(26, 26, 26, 0.5)
   );
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -96,7 +98,7 @@
 .formSide {
   background: var(--sg-dark);
   padding: 50px;
-  border-radius: 32px;
+  border-radius: 10px;
   color: white;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }

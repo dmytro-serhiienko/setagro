@@ -11,6 +11,8 @@ const menuLinks = [
   { name: "Про нас", href: "/#about" },
   { name: "Безводний аміак", href: "/ammonia" },
   { name: "Техніка", href: "/equipment" },
+  { name: "Новини", href: "/news" },
+  { name: "Вакансії", href: "/vacancies" },
   { name: "Контакти", href: "/contacts" },
 ];
 

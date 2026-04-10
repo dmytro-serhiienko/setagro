@@ -1,0 +1,133 @@
+.main {
+  width: 100%;
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #060606;
+  background-image: url("/images/hero/694827723549065f8eb9e509_bg-2.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-family: var(--font-unbounded);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.accent {
+  color: #55a630;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* ─── ТЕКСТОВА СЕКЦІЯ ─── */
+.whiteSection {
+  background-color: #ffffff;
+  padding: 60px 0;
+  color: #333;
+}
+
+.textContent {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.updateDate {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.textContent h3 {
+  font-family: var(--font-unbounded);
+  font-size: 20px;
+  color: #1a1a1a;
+  margin: 35px 0 15px;
+}
+
+.textContent p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.textContent ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.textContent li {
+  margin-bottom: 8px;
+  position: relative;
+  list-style: none;
+}
+
+.textContent li::before {
+  content: "•";
+  color: #55a630;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.footerNote {
+  margin-top: 50px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerText {
+  padding-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .whiteSection {
+    padding: 100px 0;
+  }
+
+  .textContent h3 {
+    font-size: 24px;
+  }
+}

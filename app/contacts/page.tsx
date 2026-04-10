@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { toast } from "sonner";
 import css from "./Contacts.module.css";
 import {
   MdPhoneInTalk,
@@ -10,12 +11,66 @@ import {
 } from "react-icons/md";
 
 export default function ContactsPage() {
-  const [status, setStatus] = useState("");
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("Відправляємо...");
-    setTimeout(() => setStatus("Повідомлення відправлено!"), 2000);
+
+    const form = e.currentTarget;
+    const name = (
+      form.elements.namedItem("name") as HTMLInputElement
+    ).value.trim();
+    const email = (
+      form.elements.namedItem("email") as HTMLInputElement
+    ).value.trim();
+    const phone = (
+      form.elements.namedItem("phone") as HTMLInputElement
+    ).value.trim();
+    const message = (
+      form.elements.namedItem("message") as HTMLTextAreaElement
+    ).value.trim();
+
+    if (!name) {
+      toast.warning("Вкажіть ваше імʼя");
+      return;
+    }
+    if (!email) {
+      toast.warning("Вкажіть ваш Email");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast.warning("Невірний формат Email");
+      return;
+    }
+    if (!message) {
+      toast.warning("Напишіть повідомлення");
+      return;
+    }
+
+    setSending(true);
+    try {
+      const res = await fetch("/api/nodemailer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, message }),
+      });
+      if (res.ok) {
+        toast.success("Повідомлення надіслано!", {
+          description: "Ми звʼяжемось з вами якнайшвидше.",
+        });
+        form.reset();
+      } else {
+        toast.error("Помилка відправки", {
+          description: "Спробуйте ще раз або напишіть нам безпосередньо.",
+        });
+      }
+    } catch {
+      toast.error("Помилка зʼєднання", {
+        description: "Перевірте інтернет і спробуйте знову.",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -55,7 +110,7 @@ export default function ContactsPage() {
                 </div>
                 <div>
                   <h4>Email</h4>
-                  <p>setagro09@gmail.com</p>
+                  <p>ua.setagro@gmail.com</p>
                 </div>
               </div>
               <div className={css.contactItem}>
@@ -71,28 +126,37 @@ export default function ContactsPage() {
 
             {/* Форма зворотного зв'язку */}
             <div className={css.formSide} data-gsap="fade-right">
-              <form className={css.form} onSubmit={handleSubmit}>
+              <form className={css.form} onSubmit={handleSubmit} noValidate>
                 <h3>Напишіть нам</h3>
                 <div className={css.inputGroup}>
-                  <input type="text" placeholder="Ваше ім'я" required />
+                  <input name="name" type="text" placeholder="Ваше ім'я" />
                 </div>
                 <div className={css.inputGroup}>
-                  <input type="email" placeholder="Email" required />
+                  <input name="email" type="email" placeholder="Email" />
                 </div>
                 <div className={css.inputGroup}>
-                  <input type="tel" placeholder="Номер телефону" />
+                  <input name="phone" type="tel" placeholder="Номер телефону" />
                 </div>
                 <div className={css.inputGroup}>
                   <textarea
+                    name="message"
                     placeholder="Ваше повідомлення"
                     rows={5}
-                    required
                   ></textarea>
                 </div>
-                <button type="submit" className={css.submitBtn}>
-                  Відправити <MdSend />
+                <button
+                  type="submit"
+                  className={css.submitBtn}
+                  disabled={sending}
+                >
+                  {sending ? (
+                    "Відправляємо..."
+                  ) : (
+                    <>
+                      Відправити <MdSend />
+                    </>
+                  )}
                 </button>
-                {status && <p className={css.statusMsg}>{status}</p>}
               </form>
             </div>
           </div>

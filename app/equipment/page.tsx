@@ -56,7 +56,7 @@ export default function EquipmentPage() {
             </div>
             <div className={css.imageSide} data-gsap="fade-right">
               <Image
-                src="/images/equipment/tractor.jpg"
+                src="/images/equipment/case.jpg"
                 alt="Трактори John Deere"
                 width={600}
                 height={400}
