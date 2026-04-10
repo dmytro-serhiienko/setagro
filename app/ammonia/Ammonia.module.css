@@ -1,0 +1,237 @@
+.main {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 50vh;
+  min-height: 450px;
+  background: url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(26, 26, 26, 0.9)
+  );
+}
+.title {
+  font-family: var(--font-unbounded);
+  font-size: clamp(32px, 5vw, 56px);
+  margin-bottom: 20px;
+}
+.accent {
+  color: #55a630;
+}
+.heroSubtitle {
+  font-size: 20px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Advantages */
+.advantagesSection {
+  padding: 100px 0;
+  background: #fcfcfc;
+}
+.sectionTitle {
+  text-align: center;
+  font-family: var(--font-unbounded);
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+.advantagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.advCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advIcon {
+  font-size: 44px;
+  color: #55a630;
+  margin-bottom: 20px;
+}
+.advCard h3 {
+  font-family: var(--font-unbounded);
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+.advCard p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Chart Section */
+.chartSection {
+  padding: 100px 0;
+}
+.chartContent {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+.chartText h2 {
+  font-family: var(--font-unbounded);
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+.chartText p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+}
+.formulaBadge {
+  display: flex;
+  gap: 20px;
+}
+.formulaBadge span {
+  background: #e9f2e6;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #2d5a1a;
+  font-size: 16px;
+}
+.chartImageWrapper {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+.chartImg {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Season Section */
+.seasonSection {
+  padding: 100px 0;
+  background: #1a1a1a;
+  color: white;
+}
+
+.sectionTitleLight {
+  text-align: center;
+  font-family: var(--font-unbounded);
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+
+.seasonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.seasonCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seasonIcon {
+  font-size: 60px;
+  color: #55a630;
+  margin-bottom: 25px;
+}
+.seasonBadge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #55a630;
+  border-radius: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.seasonCard h3 {
+  font-family: var(--font-unbounded);
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.seasonCard p {
+  color: #aaa;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Tech Section */
+.techSection {
+  padding: 120px 0;
+  text-align: center;
+  background: #000;
+  color: white;
+}
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: rgba(85, 166, 48, 0.1);
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 1px solid rgba(85, 166, 48, 0.3);
+}
+.iconWrapper svg {
+  font-size: 50px;
+  color: #55a630;
+}
+.techCard h3 {
+  font-family: var(--font-unbounded);
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.techCard p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #999;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .chartContent,
+  .seasonGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .formulaBadge {
+    justify-content: center;
+  }
+}

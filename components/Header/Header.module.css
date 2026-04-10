@@ -1,0 +1,207 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.scrolled {
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
+  background: rgba(13, 22, 11, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── ЛОГОТИП ── */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-unbounded);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.logo::before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 5px;
+  margin-right: 8px;
+  border-radius: 2px;
+  background-color: #55a630;
+  box-shadow:
+    0 -8px 0 0 #134611,
+    0 8px 0 0 #aacc00;
+}
+
+.logoMain {
+  color: #fff;
+}
+.logoAccent {
+  color: #55a630;
+}
+
+/* ── МОВИ  ── */
+.langWrap {
+  display: flex;
+  gap: 15px;
+  margin-left: 30px;
+}
+
+.langLink {
+  font-family: var(--font-inter);
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.langLink:hover {
+  opacity: 0.7;
+}
+
+.langDot {
+  color: #55a630;
+  font-size: 8px;
+  line-height: 1;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 35px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.navLink {
+  font-family: var(--font-inter);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: #55a630;
+}
+
+.ctaButton {
+  display: none;
+  padding: 12px 24px;
+  background: #55a630;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ctaButton:hover {
+  background: #468a27;
+  transform: translateY(-1px);
+}
+
+/* ── МОБІЛЬНЕ МЕНЮ (Бургер) ── */
+.burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 101;
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    justify-content: flex-start;
+  }
+
+  .desktopNav,
+  .ctaButton {
+    display: flex;
+  }
+
+  .burger {
+    display: none;
+  }
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 300px;
+  background: #111;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 40px 0;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.drawerLink {
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 140;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -1,0 +1,158 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 20px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.brand {
+  max-width: 300px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-unbounded);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  user-select: none;
+  flex-shrink: 0;
+
+  margin-bottom: 24px;
+}
+
+.logo::before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 5px;
+  margin-right: 8px;
+  border-radius: 2px;
+  background-color: #55a630;
+  box-shadow:
+    0 -8px 0 0 #134611,
+    0 8px 0 0 #aacc00;
+}
+
+.accent {
+  color: #55a630;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.heading {
+  font-family: var(--font-unbounded);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #55a630;
+}
+
+.nav,
+.contacts,
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav a,
+.contacts a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.nav a:hover,
+.contacts a:hover {
+  color: #55a630;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.socialIcons a:hover {
+  background: #55a630;
+  transform: translateY(-3px);
+}
+
+/* ── НИЖНЯ ── */
+.bottom {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #666;
+}
+
+.legal {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  color: #666;
+  align-items: center;
+}
+
+.legal a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+  .top {
+    grid-template-columns: 2fr 1fr 1.5fr 1fr; 
+  }
+
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* !!!!!!! */
