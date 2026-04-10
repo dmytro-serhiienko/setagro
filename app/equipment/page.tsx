@@ -5,8 +5,7 @@ import Image from "next/image";
 import css from "./Equipment.module.css";
 import { MdOutlinePrecisionManufacturing, MdSpeed } from "react-icons/md";
 
-import { FaTractor, FaTruckMoving, FaTools, FaCogs } from "react-icons/fa";
-import { MdPrecisionManufacturing } from "react-icons/md";
+import { FaTractor, FaTruckMoving } from "react-icons/fa";
 
 export default function EquipmentPage() {
   return (

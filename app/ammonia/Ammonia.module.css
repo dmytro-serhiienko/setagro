@@ -2,6 +2,7 @@
   background: #ffffff;
   color: #1a1a1a;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -13,7 +14,7 @@
 /* Hero */
 .hero {
   position: relative;
-  min-height: 50vh;
+  min-height: 60vh;
   min-height: 450px;
   background: url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover;
   display: flex;
@@ -22,15 +23,17 @@
   text-align: center;
   color: white;
 }
+
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.1),
     rgba(26, 26, 26, 0.9)
   );
 }
+
 .title {
   font-family: var(--font-unbounded);
   font-size: clamp(32px, 5vw, 56px);
@@ -50,17 +53,20 @@
   padding: 100px 0;
   background: #fcfcfc;
 }
+
 .sectionTitle {
   text-align: center;
   font-family: var(--font-unbounded);
   font-size: 32px;
   margin-bottom: 60px;
 }
+
 .advantagesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
+
 .advCard {
   background: white;
   padding: 40px 30px;
@@ -70,18 +76,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  }
 }
+
 .advIcon {
   font-size: 44px;
   color: #55a630;
   margin-bottom: 20px;
 }
+
 .advCard h3 {
   font-family: var(--font-unbounded);
   font-size: 18px;
   margin-bottom: 15px;
   color: #1a1a1a;
 }
+
 .advCard p {
   color: #666;
   line-height: 1.6;
@@ -92,27 +107,32 @@
 .chartSection {
   padding: 100px 0;
 }
+
 .chartContent {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   align-items: center;
 }
+
 .chartText h2 {
   font-family: var(--font-unbounded);
   font-size: 32px;
   margin-bottom: 25px;
 }
+
 .chartText p {
   font-size: 18px;
   line-height: 1.8;
   color: #444;
   margin-bottom: 30px;
 }
+
 .formulaBadge {
   display: flex;
   gap: 20px;
 }
+
 .formulaBadge span {
   background: #e9f2e6;
   padding: 10px 20px;
@@ -120,6 +140,7 @@
   color: #2d5a1a;
   font-size: 16px;
 }
+
 .chartImageWrapper {
   background: white;
   border-radius: 20px;
@@ -162,6 +183,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .seasonIcon {
@@ -179,11 +206,13 @@
   font-size: 12px;
   margin-bottom: 20px;
 }
+
 .seasonCard h3 {
   font-family: var(--font-unbounded);
   font-size: 24px;
   margin-bottom: 15px;
 }
+
 .seasonCard p {
   color: #aaa;
   font-size: 17px;
@@ -197,6 +226,7 @@
   background: #000;
   color: white;
 }
+
 .iconWrapper {
   display: inline-flex;
   align-items: center;
@@ -208,15 +238,18 @@
   margin-bottom: 30px;
   border: 1px solid rgba(85, 166, 48, 0.3);
 }
+
 .iconWrapper svg {
   font-size: 50px;
   color: #55a630;
 }
+
 .techCard h3 {
   font-family: var(--font-unbounded);
   font-size: 36px;
   margin-bottom: 25px;
 }
+
 .techCard p {
   max-width: 800px;
   margin: 0 auto;

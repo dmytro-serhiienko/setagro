@@ -5,7 +5,7 @@
 /* Hero */
 .hero {
   position: relative;
-  height: 40vh;
+  height: 60vh;
   min-height: 350px;
   background: url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover;
   display: flex;
@@ -19,7 +19,7 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.1),
     rgba(26, 26, 26, 0.9)
   );
 }

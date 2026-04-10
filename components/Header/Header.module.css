@@ -38,6 +38,11 @@
   letter-spacing: 1px;
   user-select: none;
   flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 }
 
 .logo::before {
@@ -104,12 +109,13 @@
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: all 0.3s ease-in-out;
   white-space: nowrap;
-}
 
-.navLink:hover {
-  color: #55a630;
+  &:hover {
+    color: #55a630;
+    transform: translateY(-3px);
+  }
 }
 
 .ctaButton {

@@ -114,24 +114,6 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* ── ВІДЕО БЛОК ── */}
-          <div className={css.videoGrid}>
-            <div className={css.videoWrapper}>
-              <iframe
-                src="https://www.youtube.com/embed/cHTSmp7Gkh8"
-                title="Робота в полі"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className={css.videoWrapper}>
-              <iframe
-                src="https://www.youtube.com/embed/H3G5y6HM6wg"
-                title="Технологія внесення"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-
           {/* ── ФОТО СІТКА ── */}
           <div className={css.photoGrid}>
             {slides.map((slide, i) => (
@@ -159,6 +141,24 @@ export default function Hero() {
             close={() => setIndex(-1)}
             slides={slides}
           />
+
+          {/* ── ВІДЕО БЛОК ── */}
+          <div className={css.videoGrid}>
+            <div className={css.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/cHTSmp7Gkh8"
+                title="Робота в полі"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className={css.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/H3G5y6HM6wg"
+                title="Технологія внесення"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
     </>
