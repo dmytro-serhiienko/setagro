@@ -34,6 +34,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${unbounded.variable} h-full antialiased`}
     >
+      <link rel="shortcut icon" href="/fav.png" type="image/x-icon" />
       <body>
         <Header />
         <SmoothScroll>
