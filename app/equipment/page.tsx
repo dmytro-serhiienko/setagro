@@ -13,7 +13,7 @@ export default function EquipmentPage() {
       {/* ── HERO SECTION ── */}
       <section className={css.hero}>
         <div className={css.overlay} />
-        <div className={css.container}>
+        <div className={css.container} data-gsap="hero">
           <h1 className={css.title}>
             НАША <span className={css.accent}>ТЕХНІКА</span>
           </h1>
@@ -28,7 +28,7 @@ export default function EquipmentPage() {
       <section className={css.section}>
         <div className={css.container}>
           <div className={css.techRow}>
-            <div className={css.textContent}>
+            <div className={css.textContent} data-gsap="fade-left">
               <div className={css.iconLabel}>
                 <FaTractor /> Трактори
               </div>
@@ -39,7 +39,7 @@ export default function EquipmentPage() {
                 стабільну роботу на складних ґрунтах.
               </p>
 
-              <div className={css.brandGrid}>
+              <div className={css.brandGrid} data-gsap="stagger">
                 <div className={css.brandCard}>
                   <strong>JOHN DEERE</strong>
                   <span>450 - 500 к.с.</span>
@@ -54,7 +54,7 @@ export default function EquipmentPage() {
                 </div>
               </div>
             </div>
-            <div className={css.imageSide}>
+            <div className={css.imageSide} data-gsap="fade-right">
               <Image
                 src="/images/equipment/tractor.jpg"
                 alt="Трактори John Deere"
@@ -71,7 +71,7 @@ export default function EquipmentPage() {
       <section className={css.darkSection}>
         <div className={css.container}>
           <div className={`${css.techRow} ${css.reverse}`}>
-            <div className={css.textContent}>
+            <div className={css.textContent} data-gsap="fade-right">
               <div className={css.iconLabel}>
                 <MdOutlinePrecisionManufacturing /> Точність
               </div>
@@ -80,7 +80,7 @@ export default function EquipmentPage() {
                 Внесення виконується культиваторами CASE, оснащеними
                 спеціалізованим обладнанням для точного контролю речовини:
               </p>
-              <ul className={css.featureList}>
+              <ul className={css.featureList} data-gsap="stagger">
                 <li>
                   <MdSpeed /> Дозувальні клапани
                 </li>
@@ -92,7 +92,7 @@ export default function EquipmentPage() {
                 </li>
               </ul>
             </div>
-            <div className={css.imageSide}>
+            <div className={css.imageSide} data-gsap="fade-left">
               <Image
                 src="/images/equipment/cultivator.jpg"
                 alt="Культиватор Case"
@@ -109,7 +109,7 @@ export default function EquipmentPage() {
       <section className={css.section}>
         <div className={css.container}>
           <div className={css.techRow}>
-            <div className={css.textContent}>
+            <div className={css.textContent} data-gsap="fade-left">
               <div className={css.iconLabel}>
                 <FaTruckMoving /> Логістика
               </div>
@@ -123,7 +123,7 @@ export default function EquipmentPage() {
                 Вантажопідйомність: <strong>18-20 тонн</strong>
               </div>
             </div>
-            <div className={css.imageSide}>
+            <div className={css.imageSide} data-gsap="fade-right">
               <Image
                 src="/images/equipment/truck.jpg"
                 alt="Логістика аміаку"

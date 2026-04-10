@@ -28,7 +28,7 @@ export default function Hero() {
         <div className={css.overlay} />
 
         <div className={css.container}>
-          <div className={css.content}>
+          <div className={css.content} data-gsap="hero">
             <h1 className={css.title}>
               Довірте внесення <span className={css.accent}>аміаку</span> —
               професіоналам!
@@ -49,11 +49,21 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        <div className={css.imageWrapper}>
+          <Image
+            src="/Nik.png"
+            alt="Hero Image"
+            width={600}
+            height={600}
+            className={css.photo}
+            priority
+          />
+        </div>
       </section>
 
       {/* FEATURES */}
       <section className={css.featuresSection} id="about">
-        <div className={css.featuresWrap}>
+        <div className={css.featuresWrap} data-gsap="stagger">
           <div className={css.featureItem}>
             <strong>10+</strong> років досвіду
           </div>
@@ -78,13 +88,13 @@ export default function Hero() {
 
       <section className={css.aboutSection}>
         <div className={css.aboutContainer}>
-          <div className={css.aboutHeader}>
+          <div className={css.aboutHeader} data-gsap="stagger">
             <span className={css.aboutBadge}>Надійний партнер</span>
             <h2 className={css.aboutTitle}>Про компанію</h2>
             <div className={css.aboutDivider} />
           </div>
 
-          <div className={css.aboutContent}>
+          <div className={css.aboutContent} data-gsap="stagger">
             <p className={css.aboutText}>
               Наша компанія має багаторічний досвід роботи в аграрному секторі.
               Ми надаємо повний спектр послуг, що охоплюють закупівлю,
@@ -104,7 +114,7 @@ export default function Hero() {
 
       <section className={css.gallerySection} id="gallery">
         <div className={css.container}>
-          <div className={css.textHeader}>
+          <div className={css.textHeader} data-gsap="stagger">
             <h2 className={css.sectionTitle}>
               Наші роботи <span className={css.accent}>у полі</span>
             </h2>
@@ -115,7 +125,7 @@ export default function Hero() {
           </div>
 
           {/* ── ФОТО СІТКА ── */}
-          <div className={css.photoGrid}>
+          <div className={css.photoGrid} data-gsap="stagger">
             {slides.map((slide, i) => (
               <div
                 key={i}
@@ -143,7 +153,7 @@ export default function Hero() {
           />
 
           {/* ── ВІДЕО БЛОК ── */}
-          <div className={css.videoGrid}>
+          <div className={css.videoGrid} data-gsap="stagger">
             <div className={css.videoWrapper}>
               <iframe
                 src="https://www.youtube.com/embed/cHTSmp7Gkh8"

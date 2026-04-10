@@ -23,7 +23,7 @@ export default function ContactsPage() {
       {/* ── HERO SECTION ── */}
       <section className={css.hero}>
         <div className={css.overlay} />
-        <div className={css.container}>
+        <div className={css.container} data-gsap="hero">
           <h1 className={css.title}>
             ЗВʼЯЖІТЬСЯ З <span className={css.accent}>НАМИ</span>
           </h1>
@@ -38,7 +38,7 @@ export default function ContactsPage() {
         <div className={css.container}>
           <div className={css.grid}>
             {/* Статичні контакти */}
-            <div className={css.infoSide}>
+            <div className={css.infoSide} data-gsap="fade-left">
               <h2>Наші координати</h2>
               <div className={css.contactItem}>
                 <div className={css.iconBox}>
@@ -70,7 +70,7 @@ export default function ContactsPage() {
             </div>
 
             {/* Форма зворотного зв'язку */}
-            <div className={css.formSide}>
+            <div className={css.formSide} data-gsap="fade-right">
               <form className={css.form} onSubmit={handleSubmit}>
                 <h3>Напишіть нам</h3>
                 <div className={css.inputGroup}>

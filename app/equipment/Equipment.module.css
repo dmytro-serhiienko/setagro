@@ -1,7 +1,6 @@
 .main {
   background: #fff;
   overflow-x: hidden;
-  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -44,7 +43,7 @@
 }
 
 .accent {
-  color: #55a630;
+  color: var(--sg-accent);
 }
 
 .heroSubtitle {
@@ -59,7 +58,7 @@
 
 .darkSection {
   padding: 60px 0;
-  background: #1a1a1a;
+  background: var(--sg-dark);
   color: white;
 }
 
@@ -76,7 +75,7 @@
   align-items: center;
   gap: 8px;
   background: rgba(85, 166, 48, 0.1);
-  color: #55a630;
+  color: var(--sg-accent);
   padding: 6px 14px;
   border-radius: 50px;
   font-weight: 700;
@@ -119,10 +118,10 @@
 }
 
 .brandCard {
-  background: #e9f2e6;
+  background: var(--sg-accent-bg);
   padding: 15px;
   border-radius: 12px;
-  color: #1a1a1a;
+  color: var(--sg-dark);
   text-align: center;
 }
 
@@ -130,7 +129,7 @@
   display: block;
   font-size: 16px;
   margin-bottom: 4px;
-  color: #55a630;
+  color: var(--sg-accent);
 }
 
 .brandCard span {
@@ -156,7 +155,7 @@
 }
 
 .featureList svg {
-  color: #55a630;
+  color: var(--sg-accent);
   flex-shrink: 0;
 }
 
@@ -164,16 +163,16 @@
 .capacityBadge {
   display: block;
   padding: 20px 40px;
-  background: #e9f2e6;
+  background: var(--sg-accent-bg);
   border-radius: 16px;
-  color: #1a1a1a;
+  color: var(--sg-dark);
   margin-top: 20px;
   text-align: center;
 }
 
 .capacityBadge strong {
   display: block;
-  color: #55a630;
+  color: var(--sg-accent);
   font-size: 24px;
   margin-top: 5px;
 }

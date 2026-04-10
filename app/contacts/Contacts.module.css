@@ -38,7 +38,7 @@
   margin-bottom: 16px;
 }
 .accent {
-  color: #55a630;
+  color: var(--sg-accent);
 }
 .heroSubtitle {
   font-size: 18px;
@@ -72,7 +72,7 @@
   width: 60px;
   height: 60px;
   background: #f0f4ef;
-  color: #55a630;
+  color: var(--sg-accent);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -89,12 +89,12 @@
 .contactItem p {
   font-size: 20px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--sg-dark);
 }
 
 /* Form Side */
 .formSide {
-  background: #1a1a1a;
+  background: var(--sg-dark);
   padding: 50px;
   border-radius: 32px;
   color: white;
@@ -104,7 +104,7 @@
   font-family: var(--font-unbounded);
   font-size: 24px;
   margin-bottom: 30px;
-  color: #55a630;
+  color: var(--sg-accent);
 }
 .inputGroup {
   margin-bottom: 20px;
@@ -123,14 +123,14 @@
 .inputGroup input:focus,
 .inputGroup textarea:focus {
   outline: none;
-  border-color: #55a630;
+  border-color: var(--sg-accent);
   background: rgba(255, 255, 255, 0.1);
 }
 
 .submitBtn {
   width: 100%;
   padding: 18px;
-  background: #55a630;
+  background: var(--sg-accent);
   color: white;
   border: none;
   border-radius: 12px;
@@ -144,13 +144,13 @@
   transition: 0.3s;
 }
 .submitBtn:hover {
-  background: #4a912a;
+  background: var(--sg-accent-hover);
   transform: translateY(-2px);
 }
 .statusMsg {
   margin-top: 15px;
   text-align: center;
-  color: #55a630;
+  color: var(--sg-accent);
   font-weight: 500;
 }
 

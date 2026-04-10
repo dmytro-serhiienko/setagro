@@ -15,7 +15,7 @@ export default function AmmoniaPage() {
     <main className={css.main}>
       <section className={css.hero}>
         <div className={css.overlay} />
-        <div className={css.container}>
+        <div className={css.container} data-gsap="hero">
           <h1 className={css.title}>
             ВНЕСЕННЯ <span className={css.accent}>БЕЗВОДНОГО АМІАКУ</span>
           </h1>
@@ -28,8 +28,10 @@ export default function AmmoniaPage() {
       {/* ── ПЕРЕВАГИ (Grid з іконками) ── */}
       <section className={css.advantagesSection}>
         <div className={css.container}>
-          <h2 className={css.sectionTitle}>Переваги використання</h2>
-          <div className={css.advantagesGrid}>
+          <h2 className={css.sectionTitle} data-gsap="fade-up">
+            Переваги використання
+          </h2>
+          <div className={css.advantagesGrid} data-gsap="stagger">
             <div className={css.advCard}>
               <div className={css.advIcon}>
                 <GiChemicalDrop />
@@ -66,7 +68,7 @@ export default function AmmoniaPage() {
       <section className={css.chartSection}>
         <div className={css.container}>
           <div className={css.chartContent}>
-            <div className={css.chartText}>
+            <div className={css.chartText} data-gsap="fade-left">
               <h2>Порівняння вмісту азоту</h2>
               <p>
                 Безводний аміак є безумовним лідером за вмістом азоту серед усіх
@@ -82,7 +84,7 @@ export default function AmmoniaPage() {
                 </span>
               </div>
             </div>
-            <div className={css.chartImageWrapper}>
+            <div className={css.chartImageWrapper} data-gsap="reveal">
               <Image
                 src="/images/ammonia/ammoniaCompare.png"
                 alt="Графік порівняння азоту"
@@ -98,8 +100,10 @@ export default function AmmoniaPage() {
       {/* ── СЕЗОННІСТЬ ВНЕСЕННЯ ── */}
       <section className={css.seasonSection}>
         <div className={css.container}>
-          <h2 className={css.sectionTitleLight}>Наші послуги з внесення</h2>
-          <div className={css.seasonGrid}>
+          <h2 className={css.sectionTitleLight} data-gsap="fade-up">
+            Наші послуги з внесення
+          </h2>
+          <div className={css.seasonGrid} data-gsap="stagger">
             <div className={css.seasonCard}>
               <MdWbSunny className={css.seasonIcon} />
               <div className={css.seasonBadge}>Весна</div>
@@ -119,7 +123,7 @@ export default function AmmoniaPage() {
       {/* ── ПРОФЕСІЙНИЙ ПІДХІД ── */}
       <section className={css.techSection}>
         <div className={css.container}>
-          <div className={css.techCard}>
+          <div className={css.techCard} data-gsap="fade-up">
             <div className={css.iconWrapper}>
               <MdSettingsSuggest />
             </div>

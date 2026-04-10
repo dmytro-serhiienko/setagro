@@ -1,6 +1,6 @@
 .main {
   background: #ffffff;
-  color: #1a1a1a;
+  color: var(--sg-dark);
 }
 
 .container {
@@ -40,7 +40,7 @@
   margin-bottom: 20px;
 }
 .accent {
-  color: #55a630;
+  color: var(--sg-accent);
 }
 .heroSubtitle {
   font-size: 20px;
@@ -86,7 +86,7 @@
 
 .advIcon {
   font-size: 44px;
-  color: #55a630;
+  color: var(--sg-accent);
   margin-bottom: 20px;
 }
 
@@ -94,7 +94,7 @@
   font-family: var(--font-unbounded);
   font-size: 18px;
   margin-bottom: 15px;
-  color: #1a1a1a;
+  color: var(--sg-dark);
 }
 
 .advCard p {
@@ -134,7 +134,7 @@
 }
 
 .formulaBadge span {
-  background: #e9f2e6;
+  background: var(--sg-accent-bg);
   padding: 10px 20px;
   border-radius: 12px;
   color: #2d5a1a;
@@ -156,7 +156,7 @@
 /* Season Section */
 .seasonSection {
   padding: 100px 0;
-  background: #1a1a1a;
+  background: var(--sg-dark);
   color: white;
 }
 
@@ -193,13 +193,13 @@
 
 .seasonIcon {
   font-size: 60px;
-  color: #55a630;
+  color: var(--sg-accent);
   margin-bottom: 25px;
 }
 .seasonBadge {
   display: inline-block;
   padding: 6px 16px;
-  background: #55a630;
+  background: var(--sg-accent);
   border-radius: 100px;
   font-weight: 700;
   text-transform: uppercase;
@@ -241,7 +241,7 @@
 
 .iconWrapper svg {
   font-size: 50px;
-  color: #55a630;
+  color: var(--sg-accent);
 }
 
 .techCard h3 {

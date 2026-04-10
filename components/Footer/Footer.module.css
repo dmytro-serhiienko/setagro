@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1a1a1a;
+  background-color: var(--sg-dark);
   color: #ffffff;
   padding: 60px 20px 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -12,7 +12,7 @@
 
 .top {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: 40px;
   margin-bottom: 60px;
 }
@@ -42,14 +42,14 @@
   width: 5px;
   margin-right: 8px;
   border-radius: 2px;
-  background-color: #55a630;
+  background-color: var(--sg-accent);
   box-shadow:
     0 -8px 0 0 #134611,
     0 8px 0 0 #aacc00;
 }
 
 .accent {
-  color: #55a630;
+  color: var(--sg-accent);
 }
 
 .tagline {
@@ -64,7 +64,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 24px;
-  color: #55a630;
+  color: var(--sg-accent);
 }
 
 .nav,
@@ -85,7 +85,7 @@
 
 .nav a:hover,
 .contacts a:hover {
-  color: #55a630;
+  color: var(--sg-accent);
 }
 
 .socialIcons {
@@ -106,7 +106,7 @@
 }
 
 .socialIcons a:hover {
-  background: #55a630;
+  background: var(--sg-accent);
   transform: translateY(-3px);
 }
 
@@ -145,7 +145,7 @@
 
 @media (min-width: 1024px) {
   .top {
-    grid-template-columns: 2fr 1fr 1.5fr 1fr; 
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
   }
 
   .bottom {

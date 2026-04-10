@@ -52,7 +52,7 @@
   width: 5px;
   margin-right: 8px;
   border-radius: 2px;
-  background-color: #55a630;
+  background-color: var(--sg-accent);
   box-shadow:
     0 -8px 0 0 #134611,
     0 8px 0 0 #aacc00;
@@ -62,7 +62,7 @@
   color: #fff;
 }
 .logoAccent {
-  color: #55a630;
+  color: var(--sg-accent);
 }
 
 /* ── МОВИ  ── */
@@ -90,7 +90,7 @@
 }
 
 .langDot {
-  color: #55a630;
+  color: var(--sg-accent);
   font-size: 8px;
   line-height: 1;
 }
@@ -113,7 +113,7 @@
   white-space: nowrap;
 
   &:hover {
-    color: #55a630;
+    color: var(--sg-accent);
     transform: translateY(-3px);
   }
 }
@@ -121,7 +121,7 @@
 .ctaButton {
   display: none;
   padding: 12px 24px;
-  background: #55a630;
+  background: var(--sg-accent);
   color: #fff;
   text-decoration: none;
   font-family: var(--font-inter);

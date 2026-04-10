@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className={css.footer}>
       <div className={css.container}>
-        <div className={css.top}>
+        <div className={css.top} data-gsap="stagger">
           <div className={css.brand}>
             <Link href="/" className={css.logo}>
               SET<span className={css.accent}>AGRO</span>
