@@ -476,3 +476,136 @@
     padding: 60px 20px;
   }
 }
+
+/*! ПАРТНЕРИ */
+.partnersSection {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.textBlock {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.partnerTitle {
+  font-family: var(--font-unbounded);
+  font-size: clamp(28px, 6vw, 40px);
+  color: #1a1a1a;
+  margin-top: 10px;
+}
+
+.partnerAccent {
+  color: #55a630;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ─── КОНТЕЙНЕР АНІМАЦІЇ ─── */
+.sliderWrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.sliderInner {
+  display: flex;
+  width: calc(200px * 10);
+  gap: 30px;
+
+  animation: scrollInfinite 30s linear infinite;
+}
+
+/* ─── КАРТКА ЛОГОТИПУ ─── */
+.partnerCard {
+  width: 270px;
+  height: 200px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.partnerCard:hover {
+  border-color: #55a630;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transform: scale(1.3);
+}
+
+.imgWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.logoImg {
+  object-fit: contain;
+}
+
+/* ───  КАДРИ АНІМАЦІЇ ─── */
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-270px * 5 - 30px * 5));
+  }
+}
+
+@media (min-width: 1200px) {
+  .partnersSection {
+    padding: 100px 0;
+  }
+
+  .partnerCard {
+    width: 320px;
+    height: 220px;
+  }
+
+  @keyframes scrollInfinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-320px * 5 - 30px * 5));
+    }
+  }
+}
+
+/* Зупинка анімації*/
+/* @media (prefers-reduced-motion: reduce) {
+  .sliderInner {
+    animation: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 30px;
+  }
+} */

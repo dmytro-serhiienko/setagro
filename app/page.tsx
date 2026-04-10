@@ -13,6 +13,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { partners } from "./partners";
 
 const slides = [
   { src: "/images/gallery/work1.jpg" },
@@ -192,6 +193,51 @@ export default function Hero() {
                 title="Технологія внесення"
                 allowFullScreen
               ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Партнери */}
+      <section className={css.partnersSection}>
+        <div className={css.container}>
+          <div className={css.textBlock}>
+            <span className={css.partnerAccent}>
+              КОМПАНІЇ, ЩО НАМ ДОВІРЯЮТЬ
+            </span>
+            <h2 className={css.partnerTitle}>НАШІ ПАРТНЕРИ</h2>
+          </div>
+
+          {/* ГОЛОВНИЙ КОНТЕЙНЕР АНІМАЦІЇ */}
+          <div className={css.sliderWrapper}>
+            <div className={css.sliderInner}>
+              {/* ОРИГІНАЛЬНИЙ СПИСОК */}
+              {partners.map((partner, index) => (
+                <div key={`orig-${index}`} className={css.partnerCard}>
+                  <div className={css.imgWrap}>
+                    <Image
+                      src={partner.src}
+                      alt={partner.alt}
+                      fill
+                      className={css.logoImg}
+                    />
+                  </div>
+                </div>
+              ))}
+
+              {/* КЛОНОВАНИЙ СПИСОК ДЛЯ БЕЗРОЗРИВНОЇ АНІМАЦІЇ */}
+              {partners.map((partner, index) => (
+                <div key={`clone-${index}`} className={css.partnerCard}>
+                  <div className={css.imgWrap}>
+                    <Image
+                      src={partner.src}
+                      alt={partner.alt}
+                      fill
+                      className={css.logoImg}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
