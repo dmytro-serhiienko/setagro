@@ -183,17 +183,78 @@
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Коли drawer закрито — скидаємо стан посилань */
+.drawer:not(.drawerOpen) .drawerLink {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: none;
+}
+
 .drawerOpen {
   transform: translateX(0);
 }
 
 .drawerLink {
-  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 32px;
   color: #fff;
   text-decoration: none;
+  font-family: var(--font-inter);
   font-size: 18px;
   font-weight: 500;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  transform: translateX(30px);
+  animation: drawerLinkIn 0.4s ease forwards;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+.drawerLink:hover {
+  color: var(--sg-accent);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.drawerIndex {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--sg-accent);
+  letter-spacing: 1px;
+  min-width: 22px;
+}
+
+.drawerFooter {
+  margin-top: auto;
+  padding: 0 32px;
+}
+
+.ctaMobile {
+  display: block;
+  text-align: center;
+  padding: 14px 24px;
+  background: var(--sg-accent);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.ctaMobile:hover {
+  background: var(--sg-accent-hover);
+}
+
+@keyframes drawerLinkIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .overlay {

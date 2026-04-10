@@ -52,10 +52,22 @@ export default function GsapInit() {
             delay: 0.15,
           });
         });
-
+        // ── HERO IMAGE (fade from right, no scroll) ─────────────────────────
+        const heroImgEls = document.querySelectorAll('[data-gsap="hero-img"]');
+        if (heroImgEls.length) {
+          gsap.set(heroImgEls, { opacity: 0, x: 80, scale: 0.95 });
+          gsap.to(heroImgEls, {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 1.2,
+            ease: heroEase,
+            delay: 0.35,
+          });
+        }
         // ── FADE UP ────────────────────────────────────────────────────────
         const fadeUpEls = document.querySelectorAll('[data-gsap="fade-up"]');
-        gsap.set(fadeUpEls, { opacity: 0, y: 55 });
+        if (fadeUpEls.length) gsap.set(fadeUpEls, { opacity: 0, y: 55 });
         fadeUpEls.forEach((el) => {
           gsap.to(el, {
             opacity: 1,
@@ -74,7 +86,7 @@ export default function GsapInit() {
         const fadeLeftEls = document.querySelectorAll(
           '[data-gsap="fade-left"]',
         );
-        gsap.set(fadeLeftEls, { opacity: 0, x: -65 });
+        if (fadeLeftEls.length) gsap.set(fadeLeftEls, { opacity: 0, x: -65 });
         fadeLeftEls.forEach((el) => {
           gsap.to(el, {
             opacity: 1,
@@ -93,7 +105,7 @@ export default function GsapInit() {
         const fadeRightEls = document.querySelectorAll(
           '[data-gsap="fade-right"]',
         );
-        gsap.set(fadeRightEls, { opacity: 0, x: 65 });
+        if (fadeRightEls.length) gsap.set(fadeRightEls, { opacity: 0, x: 65 });
         fadeRightEls.forEach((el) => {
           gsap.to(el, {
             opacity: 1,
@@ -133,7 +145,8 @@ export default function GsapInit() {
 
         // ── IMAGE / CARD REVEAL (clip-path wipe) ───────────────────────────
         const revealEls = document.querySelectorAll('[data-gsap="reveal"]');
-        gsap.set(revealEls, { clipPath: "inset(0 100% 0 0)", opacity: 0 });
+        if (revealEls.length)
+          gsap.set(revealEls, { clipPath: "inset(0 100% 0 0)", opacity: 0 });
         revealEls.forEach((el) => {
           gsap.to(el, {
             clipPath: "inset(0 0% 0 0)",
@@ -150,7 +163,6 @@ export default function GsapInit() {
       });
     });
 
-    // Правильний cleanup: скасовуємо rAF і повертаємо всі GSAP-стани
     return () => {
       cancelAnimationFrame(raf);
       ctx?.revert();

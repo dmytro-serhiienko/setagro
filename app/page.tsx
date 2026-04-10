@@ -49,7 +49,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className={css.imageWrapper}>
+        <div className={css.imageWrapper} data-gsap="hero-img">
           <Image
             src="/Nik.png"
             alt="Hero Image"
@@ -136,6 +136,7 @@ export default function Hero() {
                   src={slide.src}
                   alt={`Галерея фото ${i + 1}`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className={css.imageItem}
                 />
                 <div className={css.overlayHover}>
