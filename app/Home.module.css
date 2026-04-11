@@ -337,13 +337,8 @@
 
   .aboutContainer {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-  }
-
-  .aboutHeader {
-    position: sticky;
-    top: 120px;
   }
 
   .aboutContent {
@@ -351,6 +346,11 @@
     gap: 32px;
     padding-left: 60px;
     border-left: 1px solid #eeeeee;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
   }
 
   .aboutText {

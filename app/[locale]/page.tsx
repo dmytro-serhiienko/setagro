@@ -101,6 +101,7 @@ export default function Hero() {
         </div>
       </section>
 
+      {/* FEATURES */}
       <section className={css.featuresSection} id="about">
         <div className={css.featuresWrap} data-gsap="stagger">
           <div className={css.featureItem}>
@@ -125,6 +126,7 @@ export default function Hero() {
         </div>
       </section>
 
+      {/* ABOUT */}
       <section className={css.aboutSection}>
         <div className={css.aboutContainer}>
           <div className={css.aboutHeader} data-gsap="stagger">
@@ -144,6 +146,7 @@ export default function Hero() {
         </div>
       </section>
 
+      {/* GALLERY */}
       <section className={css.gallerySection} id="gallery">
         <div className={css.container}>
           <div className={css.textHeader} data-gsap="stagger">
@@ -190,12 +193,11 @@ export default function Hero() {
         </div>
       </section>
 
+      {/* PARTNERS */}
       <section className={css.partnersSection}>
         <div>
           <div className={css.textBlock}>
-            <span className={css.partnerAccent}>
-              {t("partners.eyebrow")}
-            </span>
+            <span className={css.partnerAccent}>{t("partners.eyebrow")}</span>
             <h2 className={css.partnerTitle}>{t("partners.title")}</h2>
           </div>
 
