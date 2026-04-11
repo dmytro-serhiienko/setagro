@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/r.png" alt="SETAGRO — Anhydrous Ammonia Application"/>
+  <img src="public/r.png" alt="SETAGRO — Anhydrous Ammonia Application"/>
 </div>
 
 <br/>
