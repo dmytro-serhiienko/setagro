@@ -1,31 +1,64 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import css from "./Home.module.css";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-import { PiTractorBold } from "react-icons/pi";
-import { PiTruckTrailerBold } from "react-icons/pi";
+
+// Icons
+import { PiTractorBold, PiTruckTrailerBold } from "react-icons/pi";
 import { MdOutlineScience } from "react-icons/md";
 import { RiTeamLine } from "react-icons/ri";
-import { useState } from "react";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+
+// LightGallery
+import lightGallery from "lightgallery";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+
+// LightGallery Styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+
+// Додаємо плагін відео
+import lgVideo from "lightgallery/plugins/video";
+
+// Імпортуємо стилі відео (обов'язково!)
+import "lightgallery/css/lg-video.css";
+
+import { photosGallery } from "./gallery";
+import { videoGallery } from "./gallery";
+
+// Swiper & Partners
 import "swiper/css";
 import { partners } from "./partners";
 
-const slides = [
-  { src: "/images/gallery/work1.jpg" },
-  { src: "/images/gallery/work2.jpg" },
-  { src: "/images/gallery/work3.jpg" },
-  { src: "/images/gallery/work4.jpg" },
-  { src: "/images/gallery/work5.jpg" },
-  { src: "/images/gallery/work6.jpg" },
-];
-
 export default function Hero() {
-  const [index, setIndex] = useState(-1);
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (galleryRef.current) {
+      const lg = lightGallery(galleryRef.current, {
+        plugins: [lgThumbnail, lgZoom, lgVideo],
+        selector: "a",
+        addClass: "lg-custom-thumbnails",
+        appendThumbnailsTo: ".lg-outer",
+        animateThumb: false,
+        allowMediaOverlap: true,
+        // Опціонально: додаємо мобільний респонсив
+        mobileSettings: {
+          controls: true,
+          showCloseIcon: true,
+          download: false,
+        },
+      });
+
+      return () => {
+        lg.destroy();
+      };
+    }
+  }, []);
+
   return (
     <>
       <section className={css.hero} id="home">
@@ -108,15 +141,13 @@ export default function Hero() {
             <p className={css.aboutText}>
               Працюємо на ринках України, Румунії, Болгарії та Молдови,
               забезпечуючи своєчасне й високоточне внесення за допомогою
-              найкращого спеціалізованого обладнання. Ми віримо в інновації та
-              щодня працюємо задля сталого розвитку сільського господарства і
-              поліпшення життя людей.
+              найкращого спеціалізованого обладнання.
             </p>
           </div>
         </div>
       </section>
 
-      {/* РОБОТИ */}
+      {/* РОБОТИ / ГАЛЕРЕЯ */}
       <section className={css.gallerySection} id="gallery">
         <div className={css.container}>
           <div className={css.textHeader} data-gsap="stagger">
@@ -129,78 +160,47 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* ── ФОТО СВАЙПЕР ── */}
-          <div className={css.swiperWrap} data-gsap="fade-up">
-            <Swiper
-              modules={[Autoplay]}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              speed={3500}
-              loop
-              allowTouchMove={false}
-              spaceBetween={16}
-              breakpoints={{
-                0: { slidesPerView: 1.2 },
-                640: { slidesPerView: 2.2 },
-                1024: { slidesPerView: 3.2 },
-              }}
-              className={css.swiper}
-            >
-              {slides.map((slide, i) => (
-                <SwiperSlide key={i}>
-                  <div
-                    className={css.galleryImgWrapper}
-                    onClick={() => setIndex(i)}
-                  >
-                    <Image
-                      src={slide.src}
-                      alt={`Галерея фото ${i + 1}`}
-                      fill
-                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                      className={css.imageItem}
-                    />
-                    <div className={css.overlayHover}>
-                      <span>Переглянути</span>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          <Lightbox
-            index={index}
-            open={index >= 0}
-            close={() => setIndex(-1)}
-            slides={slides}
-          />
-
-          {/* ── ВІДЕО БЛОК ── */}
-          <div className={css.videoGrid} data-gsap="stagger">
-            <div className={css.videoWrapper}>
-              <iframe
-                src="https://www.youtube.com/embed/cHTSmp7Gkh8"
-                title="Робота в полі"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className={css.videoWrapper}>
-              <iframe
-                src="https://www.youtube.com/embed/H3G5y6HM6wg"
-                title="Технологія внесення"
-                allowFullScreen
-              ></iframe>
-            </div>
+          <div
+            id="customize-thumbnails-gallery"
+            ref={galleryRef}
+            className={css.galleryGrid}
+          >
+            {photosGallery.map((el, index) => (
+              <a key={index} href={el.src} className={css.galleryLink}>
+                <Image
+                  src={el.src}
+                  alt={el.alt}
+                  width={300}
+                  height={200}
+                  className={css.galleryThumb}
+                />
+              </a>
+            ))}
+            {/* ВІДЕО З YOUTUBE */}
+            {videoGallery.map((video, index) => (
+              <a
+                key={index}
+                data-lg-size="1280-720"
+                data-src={video.src}
+                data-poster={video.poster} // поки відео не запущене
+              >
+                <Image
+                  src={video.poster}
+                  alt={video.alt}
+                  width={300}
+                  height={200}
+                />
+                <span className={css.playIcon}>▶</span>
+              </a>
+            ))}
+            {/*  */}
           </div>
         </div>
       </section>
 
-      {/* Партнери */}
+      {/* ПАРТНЕРИ */}
       <section className={css.partnersSection}>
-        <div className={css.container}>
+        <div>
           <div className={css.textBlock}>
             <span className={css.partnerAccent}>
               КОМПАНІЇ, ЩО НАМ ДОВІРЯЮТЬ
@@ -208,26 +208,10 @@ export default function Hero() {
             <h2 className={css.partnerTitle}>НАШІ ПАРТНЕРИ</h2>
           </div>
 
-          {/* ГОЛОВНИЙ КОНТЕЙНЕР АНІМАЦІЇ */}
           <div className={css.sliderWrapper}>
             <div className={css.sliderInner}>
-              {/* ОРИГІНАЛЬНИЙ СПИСОК */}
-              {partners.map((partner, index) => (
-                <div key={`orig-${index}`} className={css.partnerCard}>
-                  <div className={css.imgWrap}>
-                    <Image
-                      src={partner.src}
-                      alt={partner.alt}
-                      fill
-                      className={css.logoImg}
-                    />
-                  </div>
-                </div>
-              ))}
-
-              {/* КЛОНОВАНИЙ СПИСОК ДЛЯ БЕЗРОЗРИВНОЇ АНІМАЦІЇ */}
-              {partners.map((partner, index) => (
-                <div key={`clone-${index}`} className={css.partnerCard}>
+              {[...partners, ...partners].map((partner, index) => (
+                <div key={index} className={css.partnerCard}>
                   <div className={css.imgWrap}>
                     <Image
                       src={partner.src}

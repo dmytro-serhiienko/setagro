@@ -174,7 +174,7 @@
   bottom: 0;
   width: 100%;
   max-width: 300px;
-  background: #111;
+  background: var(--background);
   z-index: 150;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@
   align-items: center;
   gap: 16px;
   padding: 16px 32px;
-  color: #fff;
+  color: var(--foreground);
   text-decoration: none;
   font-family: var(--font-inter);
   font-size: 18px;
@@ -214,8 +214,8 @@
 }
 
 .drawerLink:hover {
-  color: var(--sg-accent);
-  background: rgba(255, 255, 255, 0.04);
+  color: var(--foreground);
+  background: rgba(82, 82, 82, 0.1);
 }
 
 .drawerIndex {
