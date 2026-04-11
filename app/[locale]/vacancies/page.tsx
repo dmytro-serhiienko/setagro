@@ -1,21 +1,31 @@
+"use client";
+
 import React from "react";
 import css from "./Vacancies.module.css";
-import { jobs } from "./vacanciesList";
-import Link from "next/link";
+import { useMessages, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+
+type Job = { id: number; position: string; location: string };
+
+type VacanciesMessages = {
+  Vacancies: { jobs: Job[] };
+};
 
 export default function VacanciesPage() {
+  const t = useTranslations("Vacancies");
+  const messages = useMessages() as VacanciesMessages;
+  const jobs = messages.Vacancies.jobs;
+
   return (
     <main className={css.main}>
       <section className={css.hero}>
         <div className={css.overlay} />
         <div className={css.container} data-gsap="hero">
           <h1 className={css.title}>
-            КАРʼЄРА В <span className={css.accent}>SETAGRO</span>
+            {t("hero.title")}{" "}
+            <span className={css.accent}>{t("hero.titleAccent")}</span>
           </h1>
-          <p className={css.heroSubtitle}>
-            Приєднуйтесь до команди професіоналів та розвивайте агросектор разом
-            з нами
-          </p>
+          <p className={css.heroSubtitle}>{t("hero.subtitle")}</p>
         </div>
       </section>
 
@@ -28,8 +38,8 @@ export default function VacanciesPage() {
                   <h3>{job.position}</h3>
                   <span className={css.location}>{job.location}</span>
                 </div>
-                <Link href={`/contacts`} className={css.applyBtn}>
-                  Відгукнутись
+                <Link href="/contacts" className={css.applyBtn}>
+                  {t("apply")}
                 </Link>
               </div>
             ))}

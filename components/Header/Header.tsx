@@ -1,24 +1,29 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import css from "./Header.module.css";
 import { FaCircleDot } from "react-icons/fa6";
-
-const menuLinks = [
-  { name: "Головна", href: "/" },
-  { name: "Про нас", href: "/#about" },
-  { name: "Безводний аміак", href: "/ammonia" },
-  { name: "Техніка", href: "/equipment" },
-  { name: "Новини", href: "/news" },
-  { name: "Вакансії", href: "/vacancies" },
-  { name: "Контакти", href: "/contacts" },
-];
+import { useLocale, useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 
 export default function Header() {
+  const t = useTranslations("nav");
+  const th = useTranslations("header");
+  const locale = useLocale();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const menuLinks = [
+    { name: t("home"), href: "/" },
+    { name: t("about"), href: "/#about" },
+    { name: t("ammonia"), href: "/ammonia" },
+    { name: t("equipment"), href: "/equipment" },
+    { name: t("news"), href: "/news" },
+    { name: t("vacancies"), href: "/vacancies" },
+    { name: t("contacts"), href: "/contacts" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 12);
@@ -45,29 +50,42 @@ export default function Header() {
     <>
       <header className={`${css.header} ${scrolled ? css.scrolled : ""}`}>
         <div className={css.inner}>
-          {/* Logo */}
-          <Link href="/" className={css.logo} aria-label="SETAGRO — головна">
+          <Link href="/" className={css.logo} aria-label={th("logoAria")}>
             <span className={css.logoMain}>SET</span>
             <span className={css.logoAccent}>AGRO</span>
           </Link>
 
           <div className={css.langWrap}>
-            <Link href="/" className={css.langLink}>
+            <Link
+              href={pathname}
+              locale="ua"
+              className={css.langLink}
+              aria-current={locale === "ua" ? "page" : undefined}
+            >
               UA
               <FaCircleDot className={css.langDot} />
             </Link>
-            <Link href="/" className={css.langLink}>
+            <Link
+              href={pathname}
+              locale="en"
+              className={css.langLink}
+              aria-current={locale === "en" ? "page" : undefined}
+            >
               EN
               <FaCircleDot className={css.langDot} />
             </Link>
-            <Link href="/" className={css.langLink}>
+            <Link
+              href={pathname}
+              locale="ro"
+              className={css.langLink}
+              aria-current={locale === "ro" ? "page" : undefined}
+            >
               RO
               <FaCircleDot className={css.langDot} />
             </Link>
           </div>
 
-          {/* Desktop nav */}
-          <nav className={css.desktopNav} aria-label="Основна навігація">
+          <nav className={css.desktopNav} aria-label={th("mainNav")}>
             {menuLinks.map((link) => (
               <Link key={link.href} href={link.href} className={css.navLink}>
                 {link.name}
@@ -75,16 +93,14 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
           <Link href="/contacts" className={css.ctaButton}>
-            Звʼязатись з нами
+            {th("contactCta")}
           </Link>
 
-          {/* Burger */}
           <button
             className={css.burger}
             onClick={() => setMenuOpen((v) => !v)}
-            aria-label={menuOpen ? "Закрити меню" : "Відкрити меню"}
+            aria-label={menuOpen ? th("closeMenu") : th("openMenu")}
             aria-expanded={menuOpen}
           >
             {menuOpen ? <HiX size={22} /> : <HiMenuAlt3 size={22} />}
@@ -92,21 +108,19 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile overlay */}
       <div
         className={`${css.overlay} ${menuOpen ? css.overlayVisible : ""}`}
         onClick={() => setMenuOpen(false)}
         aria-hidden="true"
       />
 
-      {/* Mobile drawer */}
       <div
         className={`${css.drawer} ${menuOpen ? css.drawerOpen : ""}`}
         role="dialog"
         aria-modal="true"
-        aria-label="Мобільне меню"
+        aria-label={th("mobileMenu")}
       >
-        <nav aria-label="Мобільна навігація">
+        <nav aria-label={th("mobileNav")}>
           {menuLinks.map((link, i) => (
             <Link
               key={link.href}
@@ -129,7 +143,7 @@ export default function Header() {
             className={css.ctaMobile}
             onClick={() => setMenuOpen(false)}
           >
-            Звʼязатись з нами
+            {th("contactCta")}
           </Link>
         </div>
       </div>

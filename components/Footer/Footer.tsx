@@ -1,11 +1,14 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import css from "./Footer.module.css";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("nav");
+  const tf = useTranslations("footer");
 
   return (
     <footer className={css.footer}>
@@ -15,32 +18,28 @@ export default function Footer() {
             <Link href="/" className={css.logo}>
               SET<span className={css.accent}>AGRO</span>
             </Link>
-            <p className={css.tagline}>
-              Професійні рішення для агробізнесу: від логістики до високоточного
-              внесення добрив.
-            </p>
+            <p className={css.tagline}>{tf("tagline")}</p>
           </div>
 
           <div className={css.nav}>
-            <h4 className={css.heading}>Навігація</h4>
-            <Link href="/">Головна</Link>
-            <Link href="/#about">Про нас</Link>
-            <Link href="/ammonia">Безводний аміак</Link>
-            <Link href="/equipment">Техніка</Link>
-            <Link href="/news">Новини</Link>
-            <Link href="/vacancies">Вакансії</Link>
-            <Link href="/contacts">Контакти</Link>
+            <h4 className={css.heading}>{tf("navHeading")}</h4>
+            <Link href="/">{t("home")}</Link>
+            <Link href="/#about">{t("about")}</Link>
+            <Link href="/ammonia">{t("ammonia")}</Link>
+            <Link href="/equipment">{t("equipment")}</Link>
+            <Link href="/news">{t("news")}</Link>
+            <Link href="/vacancies">{t("vacancies")}</Link>
+            <Link href="/contacts">{t("contacts")}</Link>
           </div>
 
           <div className={css.contacts}>
-            <h4 className={css.heading}>Контакти</h4>
-            <a href="mailto:setagro09@gmail.com">ua.setagro@gmail.com</a>
+            <h4 className={css.heading}>{tf("contactsHeading")}</h4>
+            <a href="mailto:ua.setagro@gmail.com">ua.setagro@gmail.com</a>
             <a href="tel:+380674455152">+38 (067) 445-51-52</a>
-            {/* <p>Україна, Румунія, Молдова, Болгарія</p> */}
           </div>
 
           <div className={css.socials}>
-            <h4 className={css.heading}>Ми в мережах</h4>
+            <h4 className={css.heading}>{tf("socialHeading")}</h4>
             <div className={css.socialIcons}>
               <a href="#" aria-label="Facebook">
                 <FaFacebookF />
@@ -57,10 +56,10 @@ export default function Footer() {
 
         <div className={css.bottom}>
           <p className={css.copyright}>
-            © {currentYear} SETAGRO. Всі права захищено.
+            {tf("copyright", { year: currentYear })}
           </p>
           <div className={css.legal}>
-            <Link href="/privacy-policy">Політика конфіденційності</Link>
+            <Link href="/privacy-policy">{tf("privacy")}</Link>
           </div>
         </div>
       </div>

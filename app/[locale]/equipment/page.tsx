@@ -2,62 +2,57 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import css from "./Equipment.module.css";
 import { MdOutlinePrecisionManufacturing, MdSpeed } from "react-icons/md";
 
 import { FaTractor, FaTruckMoving } from "react-icons/fa";
 
 export default function EquipmentPage() {
+  const t = useTranslations("Equipment");
+
   return (
     <main className={css.main}>
-      {/* ── HERO SECTION ── */}
       <section className={css.hero}>
         <div className={css.overlay} />
         <div className={css.container} data-gsap="hero">
           <h1 className={css.title}>
-            НАША <span className={css.accent}>ТЕХНІКА</span>
+            {t("hero.title")}{" "}
+            <span className={css.accent}>{t("hero.titleAccent")}</span>
           </h1>
-          <p className={css.heroSubtitle}>
-            Використовуємо лише потужне та сучасне обладнання провідних світових
-            брендів.
-          </p>
+          <p className={css.heroSubtitle}>{t("hero.subtitle")}</p>
         </div>
       </section>
 
-      {/* ── ТРАКТОРИ ── */}
       <section className={css.section}>
         <div className={css.container}>
           <div className={css.techRow}>
             <div className={css.textContent} data-gsap="fade-left">
               <div className={css.iconLabel}>
-                <FaTractor /> Трактори
+                <FaTractor /> {t("tractors.label")}
               </div>
-              <h2>Високопотужні тягачі</h2>
-              <p>
-                Внесення безводного аміаку здійснюється високопотужними
-                тракторами провідних брендів (450 – 535 к.с.), що забезпечує
-                стабільну роботу на складних ґрунтах.
-              </p>
+              <h2>{t("tractors.title")}</h2>
+              <p>{t("tractors.text")}</p>
 
               <div className={css.brandGrid} data-gsap="stagger">
                 <div className={css.brandCard}>
                   <strong>JOHN DEERE</strong>
-                  <span>450 - 500 к.с.</span>
+                  <span>{t("tractors.brand1")}</span>
                 </div>
                 <div className={css.brandCard}>
                   <strong>CASE</strong>
-                  <span>385 - 535 к.с.</span>
+                  <span>{t("tractors.brand2")}</span>
                 </div>
                 <div className={css.brandCard}>
                   <strong>NEW HOLLAND</strong>
-                  <span>435 - 535 к.с.</span>
+                  <span>{t("tractors.brand3")}</span>
                 </div>
               </div>
             </div>
             <div className={css.imageSide} data-gsap="fade-right">
               <Image
                 src="/images/equipment/case.jpg"
-                alt="Трактори John Deere"
+                alt={t("tractors.imageAlt")}
                 width={600}
                 height={400}
                 className={css.roundedImg}
@@ -67,35 +62,32 @@ export default function EquipmentPage() {
         </div>
       </section>
 
-      {/* ── КУЛЬТИВАТОРИ ТА ОБЛАДНАННЯ (Темна секція) ── */}
       <section className={css.darkSection}>
         <div className={css.container}>
           <div className={`${css.techRow} ${css.reverse}`}>
             <div className={css.textContent} data-gsap="fade-right">
               <div className={css.iconLabel}>
-                <MdOutlinePrecisionManufacturing /> Точність
+                <MdOutlinePrecisionManufacturing />{" "}
+                {t("cultivators.label")}
               </div>
-              <h2>Культиватори CASE</h2>
-              <p>
-                Внесення виконується культиваторами CASE, оснащеними
-                спеціалізованим обладнанням для точного контролю речовини:
-              </p>
+              <h2>{t("cultivators.title")}</h2>
+              <p>{t("cultivators.text")}</p>
               <ul className={css.featureList} data-gsap="stagger">
                 <li>
-                  <MdSpeed /> Дозувальні клапани
+                  <MdSpeed /> {t("cultivators.li1")}
                 </li>
                 <li>
-                  <MdSpeed /> Витратоміри
+                  <MdSpeed /> {t("cultivators.li2")}
                 </li>
                 <li>
-                  <MdSpeed /> Системи охолодження
+                  <MdSpeed /> {t("cultivators.li3")}
                 </li>
               </ul>
             </div>
             <div className={css.imageSide} data-gsap="fade-left">
               <Image
                 src="/images/equipment/culti.jpg"
-                alt="Культиватор Case"
+                alt={t("cultivators.imageAlt")}
                 width={600}
                 height={400}
                 className={css.roundedImg}
@@ -105,28 +97,24 @@ export default function EquipmentPage() {
         </div>
       </section>
 
-      {/* ── ЛОГІСТИКА ── */}
       <section className={css.section}>
         <div className={css.container}>
           <div className={css.techRow}>
             <div className={css.textContent} data-gsap="fade-left">
               <div className={css.iconLabel}>
-                <FaTruckMoving /> Логістика
+                <FaTruckMoving /> {t("logistics.label")}
               </div>
-              <h2>Перевезення аміаку</h2>
-              <p>
-                Ми забезпечуємо повний цикл доставки власним спецтранспортом.
-                Перевезення здійснюється вантажними автомобілями з великою
-                вантажопідйомністю.
-              </p>
+              <h2>{t("logistics.title")}</h2>
+              <p>{t("logistics.text")}</p>
               <div className={css.capacityBadge}>
-                Вантажопідйомність: <strong>18-20 тонн</strong>
+                {t("logistics.capacity")}{" "}
+                <strong>{t("logistics.capacityValue")}</strong>
               </div>
             </div>
             <div className={css.imageSide} data-gsap="fade-right">
               <Image
                 src="/images/equipment/truck.jpg"
-                alt="Логістика аміаку"
+                alt={t("logistics.imageAlt")}
                 width={600}
                 height={400}
                 className={css.roundedImg}

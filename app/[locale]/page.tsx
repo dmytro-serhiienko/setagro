@@ -1,40 +1,46 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Link from "next/link";
+import { useMessages, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import css from "./Home.module.css";
+import css from "@/app/Home.module.css";
 
-// Icons
 import { PiTractorBold, PiTruckTrailerBold } from "react-icons/pi";
 import { MdOutlineScience } from "react-icons/md";
 import { RiTeamLine } from "react-icons/ri";
 
-// LightGallery
 import lightGallery from "lightgallery";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
-// LightGallery Styles
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 
-// Додаємо плагін відео
 import lgVideo from "lightgallery/plugins/video";
 
-// Імпортуємо стилі відео (обов'язково!)
 import "lightgallery/css/lg-video.css";
 
-import { photosGallery } from "./gallery";
-import { videoGallery } from "./gallery";
+import { photosGallery } from "../gallery";
+import { videoGallery } from "../gallery";
 
-// Swiper & Partners
 import "swiper/css";
-import { partners } from "./partners";
+import { partners } from "../partners";
+
+type HomeMessages = {
+  Home: {
+    gallery: { photoAlts: string[]; videoAlts: string[] };
+  };
+};
 
 export default function Hero() {
+  const t = useTranslations("Home");
+  const messages = useMessages() as HomeMessages;
   const galleryRef = useRef<HTMLDivElement>(null);
+
+  const photoAlts = messages.Home.gallery.photoAlts;
+  const videoAlts = messages.Home.gallery.videoAlts;
 
   useEffect(() => {
     if (galleryRef.current) {
@@ -45,7 +51,6 @@ export default function Hero() {
         appendThumbnailsTo: ".lg-outer",
         animateThumb: false,
         allowMediaOverlap: true,
-        // Опціонально: додаємо мобільний респонсив
         mobileSettings: {
           controls: true,
           showCloseIcon: true,
@@ -67,21 +72,19 @@ export default function Hero() {
         <div className={css.container}>
           <div className={css.content} data-gsap="hero">
             <h1 className={css.title}>
-              Довірте внесення <span className={css.accent}>аміаку</span> —
-              професіоналам!
+              {t("hero.titleBefore")}{" "}
+              <span className={css.accent}>{t("hero.titleAccent")}</span>{" "}
+              {t("hero.titleAfter")}
             </h1>
 
-            <p className={css.description}>
-              Забезпечуємо максимальну ефективність вашого врожаю завдяки
-              точному обладнанню та багаторічному досвіду в агрохімії.
-            </p>
+            <p className={css.description}>{t("hero.description")}</p>
 
             <div className={css.actions}>
-              <Link href="#about" className={css.primaryBtn}>
-                Дізнатись більше
+              <Link href="/#about" className={css.primaryBtn}>
+                {t("hero.more")}
               </Link>
               <Link href="/contacts" className={css.secondaryBtn}>
-                Консультація
+                {t("hero.consult")}
               </Link>
             </div>
           </div>
@@ -89,7 +92,7 @@ export default function Hero() {
         <div className={css.imageWrapper} data-gsap="hero-img">
           <Image
             src="/images/hero/Nik.png"
-            alt="Hero Image"
+            alt={t("hero.heroImageAlt")}
             width={600}
             height={600}
             className={css.photo}
@@ -98,27 +101,26 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* FEATURES */}
       <section className={css.featuresSection} id="about">
         <div className={css.featuresWrap} data-gsap="stagger">
           <div className={css.featureItem}>
-            <strong>10+</strong> років досвіду
+            <strong>{t("features.yearsCount")}</strong> {t("features.years")}
           </div>
           <div className={css.featureItem}>
             <PiTractorBold size={32} />
-            Безперервне внесення аміаку
+            {t("features.continuous")}
           </div>
           <div className={css.featureItem}>
             <MdOutlineScience size={32} />
-            Науково обґрунтований підхід
+            {t("features.science")}
           </div>
           <div className={css.featureItem}>
             <RiTeamLine size={32} />
-            Кваліфікований персонал
+            {t("features.staff")}
           </div>
           <div className={css.featureItem}>
             <PiTruckTrailerBold size={32} />
-            Власна техніка
+            {t("features.fleet")}
           </div>
         </div>
       </section>
@@ -126,38 +128,30 @@ export default function Hero() {
       <section className={css.aboutSection}>
         <div className={css.aboutContainer}>
           <div className={css.aboutHeader} data-gsap="stagger">
-            <span className={css.aboutBadge}>Надійний партнер</span>
-            <h2 className={css.aboutTitle}>Про компанію</h2>
+            <span className={css.aboutBadge}>{t("about.badge")}</span>
+            <h2 className={css.aboutTitle}>{t("about.title")}</h2>
             <div className={css.aboutDivider} />
           </div>
 
           <div className={css.aboutContent} data-gsap="stagger">
             <p className={css.aboutText}>
-              Наша компанія має багаторічний досвід роботи в аграрному секторі.
-              Ми надаємо повний спектр послуг, що охоплюють закупівлю,
-              зберігання, транспортування та внесення{" "}
-              <strong>безводного аміаку</strong> як азотного добрива.
+              {t.rich("about.p1", {
+                fertilizer: (chunks) => <strong>{chunks}</strong>,
+              })}
             </p>
-            <p className={css.aboutText}>
-              Працюємо на ринках України, Румунії, Болгарії та Молдови,
-              забезпечуючи своєчасне й високоточне внесення за допомогою
-              найкращого спеціалізованого обладнання.
-            </p>
+            <p className={css.aboutText}>{t("about.p2")}</p>
           </div>
         </div>
       </section>
 
-      {/* РОБОТИ / ГАЛЕРЕЯ */}
       <section className={css.gallerySection} id="gallery">
         <div className={css.container}>
           <div className={css.textHeader} data-gsap="stagger">
             <h2 className={css.sectionTitle}>
-              Наші роботи <span className={css.accent}>у полі</span>
+              {t("gallery.title")}{" "}
+              <span className={css.accent}>{t("gallery.titleAccent")}</span>
             </h2>
-            <p className={css.sectionSubtitle}>
-              Подивіться, як працює наша техніка та яких результатів ми
-              досягаємо завдяки точному внесенню добрив.
-            </p>
+            <p className={css.sectionSubtitle}>{t("gallery.subtitle")}</p>
           </div>
 
           <div
@@ -169,43 +163,40 @@ export default function Hero() {
               <a key={index} href={el.src} className={css.galleryLink}>
                 <Image
                   src={el.src}
-                  alt={el.alt}
+                  alt={photoAlts[index] ?? el.alt}
                   width={300}
                   height={200}
                   className={css.galleryThumb}
                 />
               </a>
             ))}
-            {/* ВІДЕО З YOUTUBE */}
             {videoGallery.map((video, index) => (
               <a
                 key={index}
                 data-lg-size="1280-720"
                 data-src={video.src}
-                data-poster={video.poster} // поки відео не запущене
+                data-poster={video.poster}
               >
                 <Image
                   src={video.poster}
-                  alt={video.alt}
+                  alt={videoAlts[index] ?? video.alt}
                   width={300}
                   height={200}
                 />
                 <span className={css.playIcon}>▶</span>
               </a>
             ))}
-            {/*  */}
           </div>
         </div>
       </section>
 
-      {/* ПАРТНЕРИ */}
       <section className={css.partnersSection}>
         <div>
           <div className={css.textBlock}>
             <span className={css.partnerAccent}>
-              КОМПАНІЇ, ЩО НАМ ДОВІРЯЮТЬ
+              {t("partners.eyebrow")}
             </span>
-            <h2 className={css.partnerTitle}>НАШІ ПАРТНЕРИ</h2>
+            <h2 className={css.partnerTitle}>{t("partners.title")}</h2>
           </div>
 
           <div className={css.sliderWrapper}>

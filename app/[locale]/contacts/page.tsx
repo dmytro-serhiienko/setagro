@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 import css from "./Contacts.module.css";
 import {
   MdPhoneInTalk,
@@ -12,6 +13,8 @@ import {
 
 export default function ContactsPage() {
   const [sending, setSending] = useState(false);
+  const t = useTranslations("Contacts");
+  const tt = useTranslations("Contacts.toast");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,19 +34,19 @@ export default function ContactsPage() {
     ).value.trim();
 
     if (!name) {
-      toast.warning("Вкажіть ваше імʼя");
+      toast.warning(tt("nameRequired"));
       return;
     }
     if (!email) {
-      toast.warning("Вкажіть ваш Email");
+      toast.warning(tt("emailRequired"));
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      toast.warning("Невірний формат Email");
+      toast.warning(tt("emailInvalid"));
       return;
     }
     if (!message) {
-      toast.warning("Напишіть повідомлення");
+      toast.warning(tt("messageRequired"));
       return;
     }
 
@@ -55,18 +58,18 @@ export default function ContactsPage() {
         body: JSON.stringify({ name, email, phone, message }),
       });
       if (res.ok) {
-        toast.success("Повідомлення надіслано!", {
-          description: "Ми звʼяжемось з вами якнайшвидше.",
+        toast.success(tt("successTitle"), {
+          description: tt("successDesc"),
         });
         form.reset();
       } else {
-        toast.error("Помилка відправки", {
-          description: "Спробуйте ще раз або напишіть нам безпосередньо.",
+        toast.error(tt("errorTitle"), {
+          description: tt("errorDesc"),
         });
       }
     } catch {
-      toast.error("Помилка зʼєднання", {
-        description: "Перевірте інтернет і спробуйте знову.",
+      toast.error(tt("networkTitle"), {
+        description: tt("networkDesc"),
       });
     } finally {
       setSending(false);
@@ -75,32 +78,28 @@ export default function ContactsPage() {
 
   return (
     <main className={css.main}>
-      {/* ── HERO SECTION ── */}
       <section className={css.hero}>
         <div className={css.overlay} />
         <div className={css.container} data-gsap="hero">
           <h1 className={css.title}>
-            ЗВʼЯЖІТЬСЯ З <span className={css.accent}>НАМИ</span>
+            {t("hero.title")}{" "}
+            <span className={css.accent}>{t("hero.titleAccent")}</span>
           </h1>
-          <p className={css.heroSubtitle}>
-            Ми завжди готові до співпраці та професійної консультації.
-          </p>
+          <p className={css.heroSubtitle}>{t("hero.subtitle")}</p>
         </div>
       </section>
 
-      {/* ── CONTACTS BLOCK ── */}
       <section className={css.contentSection}>
         <div className={css.container}>
           <div className={css.grid}>
-            {/* Статичні контакти */}
             <div className={css.infoSide} data-gsap="fade-left">
-              <h2>Наші координати</h2>
+              <h2>{t("infoTitle")}</h2>
               <div className={css.contactItem}>
                 <div className={css.iconBox}>
                   <MdPhoneInTalk />
                 </div>
                 <div>
-                  <h4>Телефон</h4>
+                  <h4>{t("phoneLabel")}</h4>
                   <p>+38 067 445 51 52</p>
                 </div>
               </div>
@@ -109,7 +108,7 @@ export default function ContactsPage() {
                   <MdOutlineMail />
                 </div>
                 <div>
-                  <h4>Email</h4>
+                  <h4>{t("emailLabel")}</h4>
                   <p>ua.setagro@gmail.com</p>
                 </div>
               </div>
@@ -118,29 +117,40 @@ export default function ContactsPage() {
                   <MdLocationOn />
                 </div>
                 <div>
-                  <h4>Адреса</h4>
-                  <p>Україна, м. Київ</p>
+                  <h4>{t("addressLabel")}</h4>
+                  <p>{t("address")}</p>
                 </div>
               </div>
             </div>
 
-            {/* Форма зворотного зв'язку */}
             <div className={css.formSide} data-gsap="fade-right">
               <form className={css.form} onSubmit={handleSubmit} noValidate>
-                <h3>Напишіть нам</h3>
+                <h3>{t("formTitle")}</h3>
                 <div className={css.inputGroup}>
-                  <input name="name" type="text" placeholder="Ваше ім'я" />
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder={t("placeholders.name")}
+                  />
                 </div>
                 <div className={css.inputGroup}>
-                  <input name="email" type="email" placeholder="Email" />
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder={t("placeholders.email")}
+                  />
                 </div>
                 <div className={css.inputGroup}>
-                  <input name="phone" type="tel" placeholder="Номер телефону" />
+                  <input
+                    name="phone"
+                    type="tel"
+                    placeholder={t("placeholders.phone")}
+                  />
                 </div>
                 <div className={css.inputGroup}>
                   <textarea
                     name="message"
-                    placeholder="Ваше повідомлення"
+                    placeholder={t("placeholders.message")}
                     rows={5}
                   ></textarea>
                 </div>
@@ -150,10 +160,10 @@ export default function ContactsPage() {
                   disabled={sending}
                 >
                   {sending ? (
-                    "Відправляємо..."
+                    t("sending")
                   ) : (
                     <>
-                      Відправити <MdSend />
+                      {t("submit")} <MdSend />
                     </>
                   )}
                 </button>

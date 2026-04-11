@@ -3,13 +3,21 @@
 import { NewsItem } from "./newsType";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useMessages, useTranslations } from "next-intl";
 import css from "./News.module.css";
 import { IoIosClose } from "react-icons/io";
-import { newsItems } from "./newsList";
+
+type NewsMessages = {
+  News: { items: NewsItem[] };
+};
 
 export default function NewsPage() {
+  const t = useTranslations("News");
+  const messages = useMessages() as NewsMessages;
+  const newsItems = messages.News.items;
+
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
-  // Скрол стоп
+
   useEffect(() => {
     document.body.style.overflow = selectedNews ? "hidden" : "";
     window.dispatchEvent(
@@ -21,7 +29,6 @@ export default function NewsPage() {
     };
   }, [selectedNews]);
 
-  // Закриття модалки по Esc
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSelectedNews(null);
@@ -38,11 +45,10 @@ export default function NewsPage() {
         <div className={css.overlay} />
         <div className={css.container} data-gsap="hero">
           <h1 className={css.title}>
-            НОВИНИ <span className={css.accent}>КОМПАНІЇ</span>
+            {t("hero.title")}{" "}
+            <span className={css.accent}>{t("hero.titleAccent")}</span>
           </h1>
-          <p className={css.heroSubtitle}>
-            Актуальні події, фотозвіти та інновації у сфері агрохімії
-          </p>
+          <p className={css.heroSubtitle}>{t("hero.subtitle")}</p>
         </div>
       </section>
 
@@ -68,7 +74,7 @@ export default function NewsPage() {
                     className={css.openBtn}
                     onClick={() => setSelectedNews(item)}
                   >
-                    Відкрити
+                    {t("open")}
                   </button>
                 </div>
               </article>
@@ -77,7 +83,6 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* МОДАЛЬНЕ ВІКНО */}
       {selectedNews && (
         <div className={css.modalOverlay} onClick={closeModal}>
           <div
@@ -103,7 +108,7 @@ export default function NewsPage() {
               <div
                 className={css.modalText}
                 dangerouslySetInnerHTML={{ __html: selectedNews.content }}
-              />{" "}
+              />
             </div>
           </div>
         </div>

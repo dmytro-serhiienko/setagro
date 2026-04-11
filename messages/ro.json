@@ -1,0 +1,289 @@
+{
+  "metadata": {
+    "title": "SETAGRO — Aplicarea amoniacului anhidru",
+    "description": "Compania SETAGRO oferă servicii de aplicare a amoniacului anhidru ca îngrășământ cu azot pe câmpurile din Ucraina, România, Bulgaria și Moldova."
+  },
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre noi",
+    "ammonia": "Amoniac anhidru",
+    "equipment": "Echipamente",
+    "news": "Știri",
+    "vacancies": "Cariere",
+    "contacts": "Contacte"
+  },
+  "header": {
+    "logoAria": "SETAGRO — pagina principală",
+    "mainNav": "Navigație principală",
+    "mobileMenu": "Meniu mobil",
+    "mobileNav": "Navigație mobilă",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul",
+    "contactCta": "Contactați-ne",
+    "langRoSoon": "Română"
+  },
+  "footer": {
+    "tagline": "Soluții profesionale pentru agribusiness: de la logistică la aplicarea de înaltă precizie a îngrășămintelor.",
+    "navHeading": "Navigație",
+    "contactsHeading": "Contacte",
+    "socialHeading": "Suntem pe rețele",
+    "copyright": "© {year} SETAGRO. Toate drepturile rezervate.",
+    "privacy": "Politica de confidențialitate"
+  },
+  "Home": {
+    "hero": {
+      "titleBefore": "Încredințați aplicarea",
+      "titleAccent": "amoniacului",
+      "titleAfter": "profesioniștilor!",
+      "description": "Asigurăm eficiența maximă a recoltei dumneavoastră datorită echipamentelor de precizie și experienței vaste în agrochimie.",
+      "more": "Află mai multe",
+      "consult": "Consultanță",
+      "heroImageAlt": "Echipamente SETAGRO pe câmp"
+    },
+    "features": {
+      "years": "ani de experiență",
+      "yearsCount": "10+",
+      "continuous": "Aplicare continuă a amoniacului",
+      "science": "Abordare bazată pe știință",
+      "staff": "Personal calificat",
+      "fleet": "Echipamente proprii"
+    },
+    "about": {
+      "badge": "Partener de încredere",
+      "title": "Despre companie",
+      "p1": "Compania noastră are o experiență vastă în sectorul agricol. Oferim o gamă completă de servicii care acoperă achiziția, depozitarea, transportul și aplicarea <fertilizer>amoniacului anhidru</fertilizer> ca îngrășământ cu azot.",
+      "p2": "Activăm pe piețele din Ucraina, România, Bulgaria și Moldova, asigurând aplicarea la timp și cu precizie ridicată, folosind cele mai bune echipamente specializate."
+    },
+    "gallery": {
+      "title": "Lucrările noastre",
+      "titleAccent": "pe câmp",
+      "subtitle": "Vedeți cum funcționează echipamentele noastre și ce rezultate obținem datorită aplicării precise a îngrășămintelor.",
+      "photoAlts": [
+        "Echipamente SETAGRO la lucru, foto 1",
+        "Echipamente SETAGRO la lucru, foto 2",
+        "Echipamente SETAGRO la lucru, foto 3",
+        "Echipamente SETAGRO la lucru, foto 4",
+        "Echipamente SETAGRO la lucru, foto 5",
+        "Echipamente SETAGRO la lucru, foto 6",
+        "Echipamente SETAGRO la lucru, foto 7",
+        "Echipamente SETAGRO la lucru, foto 8",
+        "Echipamente SETAGRO la lucru, foto 9",
+        "Echipamente SETAGRO la lucru, foto 10"
+      ],
+      "videoAlts": [
+        "Video cu activitatea SETAGRO 1",
+        "Video cu activitatea SETAGRO 2"
+      ]
+    },
+    "partners": {
+      "eyebrow": "COMPANII CARE AU ÎNCREDERE ÎN NOI",
+      "title": "PARTENERII NOȘTRI"
+    }
+  },
+  "Ammonia": {
+    "hero": {
+      "title": "APLICAREA",
+      "titleAccent": "AMONIACULUI ANHIDRU",
+      "subtitle": "Formula chimică: NH3 | Conținut de azot: 82,3%"
+    },
+    "advantagesTitle": "Avantajele utilizării",
+    "adv1": {
+      "title": "82,3% Azot",
+      "text": "Cea mai mare concentrație posibilă de substanță activă."
+    },
+    "adv2": {
+      "title": "Acțiune prelungită",
+      "text": "Devine disponibil treptat după nitrificarea bacteriană."
+    },
+    "adv3": {
+      "title": "Formă amoniacală",
+      "text": "Coeficient ridicat de absorbție direct prin rădăcină."
+    },
+    "adv4": {
+      "title": "Stabilitate",
+      "text": "Îngrășământul nu este spălat de precipitații și nu se evaporă."
+    },
+    "chart": {
+      "title": "Comparația conținutului de azot",
+      "text": "Amoniacul anhidru este liderul incontestabil în ceea ce privește conținutul de azot dintre toate îngrășămintele minerale disponibile. Acest lucru îl face cea mai rentabilă soluție pe unitate de substanță activă.",
+      "formula": "Formula:",
+      "nitrogen": "Azot:",
+      "chartAlt": "Grafic de comparație a conținutului de azot în îngrășăminte"
+    },
+    "servicesTitle": "Serviciile noastre de aplicare",
+    "spring": {
+      "badge": "Primăvară",
+      "title": "Începutul semănatului",
+      "text": "Semănatul este posibil la doar două zile după aplicarea îngrășământului."
+    },
+    "autumn": {
+      "badge": "Toamnă — Iarnă",
+      "title": "Optimizarea proceselor",
+      "text": "Reducerea sarcinii asupra echipamentelor înainte de lucrările de primăvară."
+    },
+    "professional": {
+      "title": "Abordare profesională",
+      "text": "Amoniacul anhidru necesită echipamente specializate și calificare înaltă. Specialiștii noștri asigură plasarea precisă la adâncimea necesară, garantând eficiență maximă fără pierderi."
+    }
+  },
+  "Contacts": {
+    "hero": {
+      "title": "CONTACTAȚI",
+      "titleAccent": "NE",
+      "subtitle": "Suntem întotdeauna gata pentru cooperare și consultanță profesională."
+    },
+    "infoTitle": "Coordonatele noastre",
+    "phoneLabel": "Telefon",
+    "emailLabel": "Email",
+    "addressLabel": "Adresă",
+    "address": "Ucraina, Kiev",
+    "formTitle": "Scrieți-ne",
+    "placeholders": {
+      "name": "Numele dumneavoastră",
+      "email": "Email",
+      "phone": "Număr de telefon",
+      "message": "Mesajul dumneavoastră"
+    },
+    "submit": "Trimite",
+    "sending": "Se trimite...",
+    "toast": {
+      "nameRequired": "Vă rugăm să introduceți numele",
+      "emailRequired": "Vă rugăm să introduceți Email-ul",
+      "emailInvalid": "Format Email nevalid",
+      "messageRequired": "Scrieți un mesaj",
+      "successTitle": "Mesaj trimis!",
+      "successDesc": "Vă vom contacta cât mai curând posibil.",
+      "errorTitle": "Eroare la trimitere",
+      "errorDesc": "Reîncercați sau scrieți-ne direct.",
+      "networkTitle": "Eroare de conexiune",
+      "networkDesc": "Verificați internetul și încercați din nou."
+    }
+  },
+  "Equipment": {
+    "hero": {
+      "title": "ECHIPAMENTELE",
+      "titleAccent": "NOASTRE",
+      "subtitle": "Utilizăm doar echipamente puternice și moderne de la mărci de top la nivel mondial."
+    },
+    "tractors": {
+      "label": "Tractoare",
+      "title": "Tractoare de mare putere",
+      "text": "Aplicarea amoniacului anhidru se realizează cu tractoare de mare putere ale mărcilor de top (450 – 535 CP), asigurând o funcționare stabilă pe soluri dificile.",
+      "brand1": "450 - 500 CP",
+      "brand2": "385 - 535 CP",
+      "brand3": "435 - 535 CP",
+      "imageAlt": "Tractoare John Deere, Case, New Holland"
+    },
+    "cultivators": {
+      "label": "Precizie",
+      "title": "Cultivatoare CASE",
+      "text": "Aplicarea se realizează cu cultivatoare CASE, dotate cu echipamente specializate pentru controlul precis al substanței:",
+      "li1": "Valve de dozare",
+      "li2": "Debitmetre",
+      "li3": "Sisteme de răcire",
+      "imageAlt": "Cultivator Case"
+    },
+    "logistics": {
+      "label": "Logistică",
+      "title": "Transportul amoniacului",
+      "text": "Asigurăm ciclul complet de livrare cu transport specializat propriu. Transportul se realizează cu autocamioane cu capacitate mare de încărcare.",
+      "capacity": "Capacitate de încărcare:",
+      "capacityValue": "18-20 tone",
+      "imageAlt": "Logistica transportului de amoniac"
+    }
+  },
+  "News": {
+    "hero": {
+      "title": "ȘTIRILE",
+      "titleAccent": "COMPANIEI",
+      "subtitle": "Evenimente actuale, rapoarte foto și inovații în domeniul agrochimiei"
+    },
+    "open": "Deschide",
+    "items": [
+      {
+        "id": 1,
+        "title": "Ajutor pentru Forțele Aeriene",
+        "date": "03.04.2026",
+        "image": "/images/news/bus.jpg",
+        "content": "<strong>STOV «Batkivshchyna»</strong> a donat două autobuze unei unități a Forțelor Aeriene ale Ucrainei. Transportul va ajuta la rezolvarea eficientă a sarcinilor logistice ale unității.<br /><br />La inițiativă s-a alăturat și compania <strong>SETAGRO</strong>. Prin eforturi comune, s-a reușit nu doar achiziționarea transportului, ci și extinderea ajutorului — în loc de un autobuz, au fost predate patru, găsite în Italia."
+      },
+      {
+        "id": 2,
+        "title": "Training Trimble CFX-750 pentru SETAGRO în Bila Tserkva",
+        "date": "09.02.2022",
+        "image": "/images/news/trening.jpg",
+        "content": "În orașul Bila Tserkva a avut loc un training dedicat lucrului cu sistemul Trimble CFX-750. Evenimentul a fost organizat pentru angajații SETAGRO cu scopul de a crește calificarea și de a aprofunda cunoștințele în domeniul agrotehnologiilor moderne."
+      }
+    ]
+  },
+  "Vacancies": {
+    "hero": {
+      "title": "CARIERĂ ÎN",
+      "titleAccent": "SETAGRO",
+      "subtitle": "Alăturați-vă echipei de profesioniști și dezvoltați sectorul agricol alături de noi"
+    },
+    "apply": "Aplică",
+    "jobs": [
+      {
+        "id": 1,
+        "position": "Tractorist (Case/John Deere)",
+        "location": "Regiunea Kiev"
+      },
+      {
+        "id": 2,
+        "position": "Agronom-chimist",
+        "location": "Regiunea Kiev"
+      },
+      {
+        "id": 3,
+        "position": "Mecanic utilaje agricole",
+        "location": "Regiunea Kiev"
+      }
+    ]
+  },
+  "Privacy": {
+    "hero": {
+      "title": "POLITICA DE",
+      "titleAccent": "CONFIDENȚIALITATE",
+      "subtitle": "Avem grijă de datele și securitatea dumneavoastră"
+    },
+    "updateDate": "Ultima actualizare: 11 aprilie 2026",
+    "s1": {
+      "title": "1. Dispoziții generale",
+      "text": "Această Politică de confidențialitate stabilește procedura de primire, stocare, procesare și utilizare a datelor cu caracter personal ale utilizatorilor site-ului <site>setagro</site> (în continuare — Site-ul)."
+    },
+    "s2": {
+      "title": "2. Ce date colectăm",
+      "intro": "Colectăm doar datele pe care ni le furnizați voluntar prin formularele de contact sau secțiunea de cariere:",
+      "items": [
+        "Nume și Prenume;",
+        "Număr de telefon de contact;",
+        "Adresa de e-mail;",
+        "Informațiile conținute în CV-ul dumneavoastră."
+      ]
+    },
+    "s3": {
+      "title": "3. Scopul procesării datelor",
+      "intro": "Datele dumneavoastră sunt utilizate exclusiv pentru:",
+      "items": [
+        "Furnizarea de consultanță privind serviciile de aplicare a amoniacului;",
+        "Procesarea candidaturilor pentru posturile vacante;",
+        "Îmbunătățirea Site-ului și a calității serviciilor."
+      ]
+    },
+    "s4": {
+      "title": "4. Protecția datelor",
+      "text": "Utilizăm standarde moderne de protecție a informațiilor împotriva pierderii, utilizării necorespunzătoare sau distrugerii."
+    },
+    "s5": {
+      "title": "5. Transferul către terți",
+      "text": "Noi <emph>nu vindem</emph> și nu transferăm datele dumneavoastră personale către terți."
+    },
+    "s6": {
+      "title": "6. Drepturile dumneavoastră",
+      "text": "Aveți dreptul de a solicita în orice moment accesul la datele dumneavoastră, corectarea erorilor sau ștergerea completă a informațiilor din baza noastră de date."
+    },
+    "footerPrefix": "Pentru întrebări legate de confidențialitate, contactați-ne la:",
+    "footerEmail": "ua.setagro@gmail.com"
+  }
+}

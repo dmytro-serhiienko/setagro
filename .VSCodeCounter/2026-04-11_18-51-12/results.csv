@@ -1,0 +1,24 @@
+"filename", "language", "TypeScript JSX", "TypeScript", "PostCSS", "comment", "blank", "total"
+"/Users/user/Documents/Projects/next/setagro/app/Home.module.css", "PostCSS", 0, 0, 574, 18, 91, 683
+"/Users/user/Documents/Projects/next/setagro/app/ammonia/Ammonia.module.css", "PostCSS", 0, 0, 231, 5, 35, 271
+"/Users/user/Documents/Projects/next/setagro/app/ammonia/page.tsx", "TypeScript JSX", 133, 0, 0, 4, 6, 143
+"/Users/user/Documents/Projects/next/setagro/app/api/nodemailer/route.ts", "TypeScript", 0, 47, 0, 0, 7, 54
+"/Users/user/Documents/Projects/next/setagro/app/contacts/Contacts.module.css", "PostCSS", 0, 0, 154, 4, 10, 168
+"/Users/user/Documents/Projects/next/setagro/app/contacts/page.tsx", "TypeScript JSX", 154, 0, 0, 4, 10, 168
+"/Users/user/Documents/Projects/next/setagro/app/equipment/Equipment.module.css", "PostCSS", 0, 0, 194, 6, 36, 236
+"/Users/user/Documents/Projects/next/setagro/app/equipment/page.tsx", "TypeScript JSX", 129, 0, 0, 4, 8, 141
+"/Users/user/Documents/Projects/next/setagro/app/gallery.ts", "TypeScript", 0, 54, 0, 0, 2, 56
+"/Users/user/Documents/Projects/next/setagro/app/globals.css", "PostCSS", 0, 0, 23, 0, 4, 27
+"/Users/user/Documents/Projects/next/setagro/app/layout.tsx", "TypeScript JSX", 47, 0, 0, 0, 5, 52
+"/Users/user/Documents/Projects/next/setagro/app/news/News.module.css", "PostCSS", 0, 0, 224, 4, 36, 264
+"/Users/user/Documents/Projects/next/setagro/app/news/newsList.tsx", "TypeScript JSX", 42, 0, 0, 0, 1, 43
+"/Users/user/Documents/Projects/next/setagro/app/news/newsType.ts", "TypeScript", 0, 7, 0, 0, 1, 8
+"/Users/user/Documents/Projects/next/setagro/app/news/page.tsx", "TypeScript JSX", 103, 0, 0, 3, 8, 114
+"/Users/user/Documents/Projects/next/setagro/app/page.tsx", "TypeScript JSX", 197, 0, 0, 12, 23, 232
+"/Users/user/Documents/Projects/next/setagro/app/partners.ts", "TypeScript", 0, 22, 0, 0, 1, 23
+"/Users/user/Documents/Projects/next/setagro/app/privacy-policy/Privacy.module.css", "PostCSS", 0, 0, 116, 2, 20, 138
+"/Users/user/Documents/Projects/next/setagro/app/privacy-policy/page.tsx", "TypeScript JSX", 87, 0, 0, 0, 10, 97
+"/Users/user/Documents/Projects/next/setagro/app/vacancies/Vacancies.module.css", "PostCSS", 0, 0, 142, 6, 22, 170
+"/Users/user/Documents/Projects/next/setagro/app/vacancies/page.tsx", "TypeScript JSX", 39, 0, 0, 0, 3, 42
+"/Users/user/Documents/Projects/next/setagro/app/vacancies/vacanciesList.ts", "TypeScript", 0, 17, 0, 0, 1, 18
+"Total", "-", 931, 147, 1658, 72, 340, 3148

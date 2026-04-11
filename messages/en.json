@@ -1,0 +1,308 @@
+{
+  "metadata": {
+    "title": "SETAGRO — Anhydrous ammonia application",
+    "description": "SETAGRO provides anhydrous ammonia application as a nitrogen fertilizer on fields in Ukraine, Romania, Bulgaria, and Moldova."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "ammonia": "Anhydrous ammonia",
+    "equipment": "Equipment",
+    "news": "News",
+    "vacancies": "Careers",
+    "contacts": "Contacts"
+  },
+  "header": {
+    "logoAria": "SETAGRO — home",
+    "mainNav": "Main navigation",
+    "mobileMenu": "Mobile menu",
+    "mobileNav": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "contactCta": "Contact us",
+    "langRoSoon": "Romanian (coming soon)"
+  },
+  "footer": {
+    "tagline": "Professional solutions for agribusiness: from logistics to high-precision fertilizer application.",
+    "navHeading": "Navigation",
+    "contactsHeading": "Contacts",
+    "socialHeading": "Follow us",
+    "copyright": "© {year} SETAGRO. All rights reserved.",
+    "privacy": "Privacy policy"
+  },
+  "Home": {
+    "hero": {
+      "titleBefore": "Trust ",
+      "titleAccent": "ammonia application",
+      "titleAfter": " to the pros!",
+      "description": "We help you get the most from every harvest with precise equipment and years of experience in agrochemistry.",
+      "more": "Learn more",
+      "consult": "Consultation",
+      "heroImageAlt": "SETAGRO machinery in the field"
+    },
+    "features": {
+      "years": "years of experience",
+      "yearsCount": "10+",
+      "continuous": "Continuous ammonia application",
+      "science": "Science-based approach",
+      "staff": "Qualified staff",
+      "fleet": "Own machinery"
+    },
+    "about": {
+      "badge": "Reliable partner",
+      "title": "About the company",
+      "p1": "Our company has many years of experience in agriculture. We offer a full range of services covering procurement, storage, transport, and application of <fertilizer>anhydrous ammonia</fertilizer> as a nitrogen fertilizer.",
+      "p2": "We operate in Ukraine, Romania, Bulgaria, and Moldova, ensuring timely, high-precision application with best-in-class specialized equipment."
+    },
+    "gallery": {
+      "title": "Our work",
+      "titleAccent": "in the field",
+      "subtitle": "See how our machinery performs and the results we achieve through precise fertilizer application.",
+      "photoAlts": [
+        "SETAGRO machinery at work, photo 1",
+        "SETAGRO machinery at work, photo 2",
+        "SETAGRO machinery at work, photo 3",
+        "SETAGRO machinery at work, photo 4",
+        "SETAGRO machinery at work, photo 5",
+        "SETAGRO machinery at work, photo 6",
+        "SETAGRO machinery at work, photo 7",
+        "SETAGRO machinery at work, photo 8",
+        "SETAGRO machinery at work, photo 9",
+        "SETAGRO machinery at work, photo 10"
+      ],
+      "videoAlts": ["SETAGRO work video 1", "SETAGRO work video 2"]
+    },
+    "partners": {
+      "eyebrow": "COMPANIES THAT TRUST US",
+      "title": "OUR PARTNERS"
+    }
+  },
+  "Ammonia": {
+    "hero": {
+      "title": "APPLICATION OF",
+      "titleAccent": "ANHYDROUS AMMONIA",
+      "subtitle": "Chemical formula: NH3 | Nitrogen mass fraction: 82.3%"
+    },
+    "advantagesTitle": "Benefits of use",
+    "adv1": {
+      "title": "82.3% nitrogen",
+      "text": "The highest concentration of active ingredient available."
+    },
+    "adv2": {
+      "title": "Extended release",
+      "text": "Becomes available gradually after nitrification by bacteria."
+    },
+    "adv3": {
+      "title": "Ammonium form",
+      "text": "High uptake efficiency directly through the roots."
+    },
+    "adv4": {
+      "title": "Stability",
+      "text": "The fertilizer is not washed away by rain and does not volatilize."
+    },
+    "chart": {
+      "title": "Nitrogen content comparison",
+      "text": "Anhydrous ammonia leads all common mineral fertilizers in nitrogen content. That makes it the most cost-effective option per unit of active ingredient.",
+      "formula": "Formula:",
+      "nitrogen": "Nitrogen:",
+      "chartAlt": "Chart comparing nitrogen content in fertilizers"
+    },
+    "servicesTitle": "Our application services",
+    "spring": {
+      "badge": "Spring",
+      "title": "Start of sowing season",
+      "text": "Sowing is possible as soon as two days after application."
+    },
+    "autumn": {
+      "badge": "Autumn — Winter",
+      "title": "Process optimization",
+      "text": "Reduced load on machinery before spring field work."
+    },
+    "professional": {
+      "title": "Professional approach",
+      "text": "Anhydrous ammonia requires specialized equipment and expertise. Our specialists ensure accurate placement at the right depth for maximum efficiency without losses."
+    }
+  },
+  "Contacts": {
+    "hero": {
+      "title": "CONTACT",
+      "titleAccent": "US",
+      "subtitle": "We are always open to cooperation and professional consultation."
+    },
+    "infoTitle": "Our details",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "address": "Ukraine, Kyiv",
+    "formTitle": "Write to us",
+    "placeholders": {
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone number",
+      "message": "Your message"
+    },
+    "submit": "Send",
+    "sending": "Sending...",
+    "toast": {
+      "nameRequired": "Please enter your name",
+      "emailRequired": "Please enter your email",
+      "emailInvalid": "Invalid email format",
+      "messageRequired": "Please enter a message",
+      "successTitle": "Message sent!",
+      "successDesc": "We will get back to you as soon as possible.",
+      "errorTitle": "Failed to send",
+      "errorDesc": "Please try again or contact us directly.",
+      "networkTitle": "Connection error",
+      "networkDesc": "Check your internet connection and try again."
+    }
+  },
+  "Equipment": {
+    "hero": {
+      "title": "OUR",
+      "titleAccent": "MACHINERY",
+      "subtitle": "We use only powerful, modern equipment from leading global brands."
+    },
+    "tractors": {
+      "label": "Tractors",
+      "title": "High-power tractors",
+      "text": "Anhydrous ammonia is applied with high-power tractors from leading brands (450–535 hp), ensuring stable performance on challenging soils.",
+      "brand1": "450–500 hp",
+      "brand2": "385–535 hp",
+      "brand3": "435–535 hp",
+      "imageAlt": "John Deere, Case, New Holland tractors"
+    },
+    "cultivators": {
+      "label": "Precision",
+      "title": "CASE cultivators",
+      "text": "Application is carried out with CASE cultivators equipped for precise control of the product:",
+      "li1": "Metering valves",
+      "li2": "Flow meters",
+      "li3": "Cooling systems",
+      "imageAlt": "Case cultivator"
+    },
+    "logistics": {
+      "label": "Logistics",
+      "title": "Ammonia transport",
+      "text": "We provide end-to-end delivery with our own specialized transport. Haulage uses heavy trucks with high payload capacity.",
+      "capacity": "Payload:",
+      "capacityValue": "18–20 tonnes",
+      "imageAlt": "Ammonia logistics and transport"
+    }
+  },
+  "News": {
+    "hero": {
+      "title": "NEWS",
+      "titleAccent": "SETAGRO",
+      "subtitle": "Current events, photo reports, and innovations in agrochemistry"
+    },
+    "open": "Open",
+    "items": [
+      {
+        "id": 1,
+        "title": "Support for the Air Force",
+        "date": "03.04.2026",
+        "image": "/images/news/bus.jpg",
+        "content": "<strong>FSC Batkivshyna</strong> donated two buses to a unit of the Ukrainian Air Force. The vehicles will help the unit meet its logistics needs more effectively.<br /><br /><strong>SETAGRO</strong> also joined the initiative. Together, the partners not only purchased vehicles but expanded the effort—instead of one bus, four were sourced in Italy and handed over.<br /><br />The project was made possible by coordinated teamwork and partners who provided funding, organization, and communications."
+      },
+      {
+        "id": 2,
+        "title": "Trimble CFX-750 training for SETAGRO in Bila Tserkva",
+        "date": "09.02.2022",
+        "image": "/images/news/trening.jpg",
+        "content": "A hands-on training on the Trimble CFX-750 system was held in Bila Tserkva for SETAGRO employees to deepen skills and knowledge in modern agricultural technology.<br /><br />Participants explored system features, configuration, and field use, with emphasis on navigation accuracy and equipment efficiency in agriculture.<br /><br />Company leadership also attended and stressed the importance of innovation in daily operations and ongoing professional development.<br /><br />Such training supports higher operational efficiency and the adoption of modern technology across the company."
+      },
+      {
+        "id": 3,
+        "title": "The anhydrous ammonia market in Ukraine",
+        "date": "04.09.2020",
+        "image": "/images/news/grafic.jpg",
+        "content": "Ukraine uses roughly 140–160 thousand tonnes of anhydrous ammonia per year, yet the segment remains relatively small due to complex logistics, storage, and application.<br /><br />The market is closely tied to natural gas prices, which account for up to 90% of ammonia production cost. Lower gas prices tend to boost domestic production and market activity.<br /><br />Despite the challenges, anhydrous ammonia remains an efficient nitrogen source, and experts expect gradual growth in agricultural use."
+      },
+      {
+        "id": 4,
+        "title": "About ammonia",
+        "date": "18.06.2020",
+        "image": "/images/news/lat1.jpg",
+        "content": "Managing partner of <strong>Setagro</strong>, Mykola Kybuk, told Latifundist that ammonia is the primary feedstock for most nitrogen fertilizers and is produced mainly from natural gas today, while its history spans over 100 years—from coal-based synthesis to use as fertilizer in the United States, including in irrigation systems.<br /><br />Ammonia (NH3) is not only an effective fertilizer but also a basis for urea, ammonium nitrate, and other nitrogen products. Ammonium water—ammonia dissolved in water—is also widely used."
+      },
+      {
+        "id": 5,
+        "title": "Round table with SETAGRO",
+        "date": "20.01.2016",
+        "image": "/images/news/krug.jpg",
+        "content": "On January 20, 2016, a round table brought together representatives of Setagro LLC, scientists from the Institute of Agricultural Microbiology of the NAAS, and partners. Participants discussed microbial products and AZOTER fertilizers, as well as cooperation and innovation in agriculture."
+      }
+    ]
+  },
+  "Vacancies": {
+    "hero": {
+      "title": "CAREERS AT",
+      "titleAccent": "SETAGRO",
+      "subtitle": "Join a team of professionals and grow the agricultural sector with us"
+    },
+    "apply": "Apply",
+    "jobs": [
+      {
+        "id": 1,
+        "position": "Tractor driver (Case/John Deere)",
+        "location": "Kyiv region"
+      },
+      {
+        "id": 2,
+        "position": "Agronomist-chemist",
+        "location": "Kyiv region"
+      },
+      {
+        "id": 3,
+        "position": "Agricultural machinery mechanic",
+        "location": "Kyiv region"
+      }
+    ]
+  },
+  "Privacy": {
+    "hero": {
+      "title": "PRIVACY",
+      "titleAccent": "POLICY",
+      "subtitle": "We care about your data and your security"
+    },
+    "updateDate": "Last updated: April 11, 2026",
+    "s1": {
+      "title": "1. General provisions",
+      "text": "This Privacy Policy describes how personal data of visitors to the <site>setagro</site> website (the “Site”) is collected, stored, processed, and used. We respect the confidentiality of everyone who visits our Site."
+    },
+    "s2": {
+      "title": "2. Data we collect",
+      "intro": "We only collect information you voluntarily provide through contact forms, the careers section, or when you reach out to us:",
+      "items": [
+        "First and last name;",
+        "Phone number;",
+        "Email address;",
+        "Information contained in your CV (for job applicants)."
+      ]
+    },
+    "s3": {
+      "title": "3. Purposes of processing",
+      "intro": "Your data is used solely to:",
+      "items": [
+        "Provide consultation on anhydrous ammonia application services;",
+        "Process your job applications;",
+        "Improve our Site and service quality;",
+        "Send informational messages with your consent."
+      ]
+    },
+    "s4": {
+      "title": "4. Protection and retention",
+      "text": "We use current standards to protect information from loss, misuse, or destruction. We retain your data only as long as needed for the purposes for which it was collected, or until you request deletion."
+    },
+    "s5": {
+      "title": "5. Sharing with third parties",
+      "text": "We <emph>do not sell</emph> or share your personal data with third parties. This does not apply to trusted partners who help us run the Site, provided they agree to keep the information confidential."
+    },
+    "s6": {
+      "title": "6. Your rights",
+      "text": "You may request access to your personal data at any time, ask us to correct inaccuracies, or request full deletion from our records."
+    },
+    "footerPrefix": "For privacy questions, contact:",
+    "footerEmail": "ua.setagro@gmail.com"
+  }
+}
