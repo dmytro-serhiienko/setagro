@@ -1,10 +1,10 @@
 export const partners = [
   {
-    src: "/partners/agrotrade.png",
+    src: "/partners/agrot.png",
     alt: "Партнер Agrotrade",
   },
   {
-    src: "/partners/batkiv.png",
+    src: "/partners/bat.png",
     alt: "Партнер Batkivshyna",
   },
   {
@@ -12,11 +12,11 @@ export const partners = [
     alt: "Партнер Fozy",
   },
   {
-    src: "/partners/magnat.png",
+    src: "/partners/mag.png",
     alt: "Партнер Magnat",
   },
   {
-    src: "/partners/zahyst.png",
+    src: "/partners/zah.png",
     alt: "Партнер Захист",
   },
 ];

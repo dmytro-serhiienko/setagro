@@ -589,8 +589,9 @@
 
 .partnerTitle {
   font-family: var(--font-unbounded);
-  font-size: clamp(28px, 6vw, 40px);
-  color: #1a1a1a;
+  font-size: clamp(32px, 5vw, 44px);
+  color: var(--sg-dark);
+  font-weight: 800;
   margin-top: 10px;
 }
 
@@ -665,10 +666,6 @@
 }
 
 @media (min-width: 1200px) {
-  .partnersSection {
-    padding: 100px 0;
-  }
-
   .partnerCard {
     width: 320px;
     height: 220px;
