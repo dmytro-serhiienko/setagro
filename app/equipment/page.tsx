@@ -94,7 +94,7 @@ export default function EquipmentPage() {
             </div>
             <div className={css.imageSide} data-gsap="fade-left">
               <Image
-                src="/images/equipment/cultivator.jpg"
+                src="/images/equipment/culti.jpg"
                 alt="Культиватор Case"
                 width={600}
                 height={400}
