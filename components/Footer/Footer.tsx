@@ -16,7 +16,8 @@ export default function Footer() {
         <div className={css.top} data-gsap="stagger">
           <div className={css.brand}>
             <Link href="/" className={css.logo}>
-              SET<span className={css.accent}>AGRO</span>
+              {tf("logoMain")}
+              <span className={css.accent}>{tf("logoAccent")}</span>
             </Link>
             <p className={css.tagline}>{tf("tagline")}</p>
           </div>
@@ -34,8 +35,8 @@ export default function Footer() {
 
           <div className={css.contacts}>
             <h4 className={css.heading}>{tf("contactsHeading")}</h4>
-            <a href="mailto:ua.setagro@gmail.com">ua.setagro@gmail.com</a>
-            <a href="tel:+380674455152">+38 (067) 445-51-52</a>
+            <a href={`mailto:${tf("footerHrefEmail")}`}>{tf("email")}</a>
+            <a href={`tel:${tf("footerHrefPhone")}`}>{tf("phone")}</a>
           </div>
 
           <div className={css.socials}>

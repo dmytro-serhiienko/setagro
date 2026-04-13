@@ -100,7 +100,7 @@ export default function ContactsPage() {
                 </div>
                 <div>
                   <h4>{t("phoneLabel")}</h4>
-                  <p>+38 067 445 51 52</p>
+                  <p>{t("contactPhone")}</p>
                 </div>
               </div>
               <div className={css.contactItem}>
@@ -109,7 +109,7 @@ export default function ContactsPage() {
                 </div>
                 <div>
                   <h4>{t("emailLabel")}</h4>
-                  <p>ua.setagro@gmail.com</p>
+                  <p>{t("contactEmail")}</p>
                 </div>
               </div>
               <div className={css.contactItem}>

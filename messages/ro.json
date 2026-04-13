@@ -13,7 +13,10 @@
     "contacts": "Contacte"
   },
   "header": {
-    "logoAria": "SETAGRO — pagina principală",
+    "logoMain": "UKR-PRAT",
+    "logoAccent": "TRADE",
+
+    "logoAria": "UKR - PRAT TRADE — pagina principală",
     "mainNav": "Navigație principală",
     "mobileMenu": "Meniu mobil",
     "mobileNav": "Navigație mobilă",
@@ -23,12 +26,21 @@
     "langRoSoon": "Română"
   },
   "footer": {
+    "logoMain": "UKR-PRAT",
+    "logoAccent": "TRADE",
+
     "tagline": "Soluții profesionale pentru agribusiness: de la logistică la aplicarea de înaltă precizie a îngrășămintelor.",
     "navHeading": "Navigație",
     "contactsHeading": "Contacte",
     "socialHeading": "Suntem pe rețele",
-    "copyright": "© {year} SETAGRO. Toate drepturile rezervate.",
-    "privacy": "Politica de confidențialitate"
+    "copyright": "© {year} UKR-PRAT TRADE. Toate drepturile rezervate.",
+    "privacy": "Politica de confidențialitate",
+
+    "footerHrefEmail": "mailto:ukr-prat@gmail.com",
+    "footerHrefPhone": "tel:+40 987654321",
+
+    "email": "ukr-prat@gmail.com",
+    "phone": "+40 987654321"
   },
   "Home": {
     "hero": {
@@ -38,7 +50,7 @@
       "description": "Asigurăm eficiența maximă a recoltei dumneavoastră datorită echipamentelor de precizie și experienței vaste în agrochimie.",
       "more": "Află mai multe",
       "consult": "Consultanță",
-      "heroImageAlt": "Echipamente SETAGRO pe câmp"
+      "heroImageAlt": "Echipamente UKR-PRAT TRADE pe câmp"
     },
     "features": {
       "years": "ani de experiență",
@@ -59,20 +71,20 @@
       "titleAccent": "pe câmp",
       "subtitle": "Vedeți cum funcționează echipamentele noastre și ce rezultate obținem datorită aplicării precise a îngrășămintelor.",
       "photoAlts": [
-        "Echipamente SETAGRO la lucru, foto 1",
-        "Echipamente SETAGRO la lucru, foto 2",
-        "Echipamente SETAGRO la lucru, foto 3",
-        "Echipamente SETAGRO la lucru, foto 4",
-        "Echipamente SETAGRO la lucru, foto 5",
-        "Echipamente SETAGRO la lucru, foto 6",
-        "Echipamente SETAGRO la lucru, foto 7",
-        "Echipamente SETAGRO la lucru, foto 8",
-        "Echipamente SETAGRO la lucru, foto 9",
-        "Echipamente SETAGRO la lucru, foto 10"
+        "Echipamente UKR-PRAT TRADE la lucru, foto 1",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 2",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 3",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 4",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 5",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 6",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 7",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 8",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 9",
+        "Echipamente UKR-PRAT TRADE la lucru, foto 10"
       ],
       "videoAlts": [
-        "Video cu activitatea SETAGRO 1",
-        "Video cu activitatea SETAGRO 2"
+        "Video cu activitatea UKR-PRAT TRADE",
+        "Video cu activitatea UKR-PRAT TRADE"
       ]
     },
     "partners": {
@@ -133,10 +145,14 @@
       "subtitle": "Suntem întotdeauna gata pentru cooperare și consultanță profesională."
     },
     "infoTitle": "Coordonatele noastre",
+
+    "contactPhone": "+40 987-65-43-21",
+    "contactEmail": "ukrprat@gmail.com",
+
     "phoneLabel": "Telefon",
     "emailLabel": "Email",
     "addressLabel": "Adresă",
-    "address": "Ucraina, Kiev",
+    "address": "România, Chitila, județ Ilfov",
     "formTitle": "Scrieți-ne",
     "placeholders": {
       "name": "Numele dumneavoastră",

@@ -6,6 +6,7 @@ import css from "./Header.module.css";
 import { FaCircleDot } from "react-icons/fa6";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import { menuLanguages } from "./HeaderLanguages";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -51,38 +52,24 @@ export default function Header() {
       <header className={`${css.header} ${scrolled ? css.scrolled : ""}`}>
         <div className={css.inner}>
           <Link href="/" className={css.logo} aria-label={th("logoAria")}>
-            <span className={css.logoMain}>SET</span>
-            <span className={css.logoAccent}>AGRO</span>
+            <span className={css.logoMain}>{th("logoMain")}</span>
+            <span className={css.logoAccent}>{th("logoAccent")}</span>
           </Link>
 
+          {/* Languages */}
           <div className={css.langWrap}>
-            <Link
-              href={pathname}
-              locale="ua"
-              className={css.langLink}
-              aria-current={locale === "ua" ? "page" : undefined}
-            >
-              UA
-              <FaCircleDot className={css.langDot} />
-            </Link>
-            <Link
-              href={pathname}
-              locale="en"
-              className={css.langLink}
-              aria-current={locale === "en" ? "page" : undefined}
-            >
-              EN
-              <FaCircleDot className={css.langDot} />
-            </Link>
-            <Link
-              href={pathname}
-              locale="ro"
-              className={css.langLink}
-              aria-current={locale === "ro" ? "page" : undefined}
-            >
-              RO
-              <FaCircleDot className={css.langDot} />
-            </Link>
+            {menuLanguages.map((lang) => (
+              <Link
+                key={lang.code}
+                href={pathname}
+                locale={lang.code}
+                className={css.langLink}
+                aria-current={locale === lang.code ? "page" : undefined}
+              >
+                {lang.label}
+                <FaCircleDot className={css.langDot} />
+              </Link>
+            ))}
           </div>
 
           <nav className={css.desktopNav} aria-label={th("mainNav")}>

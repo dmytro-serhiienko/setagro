@@ -13,6 +13,9 @@
     "contacts": "Контакти"
   },
   "header": {
+    "logoMain": "SET",
+    "logoAccent": "AGRO",
+
     "logoAria": "SETAGRO — головна",
     "mainNav": "Основна навігація",
     "mobileMenu": "Мобільне меню",
@@ -23,12 +26,20 @@
     "langRoSoon": "Румунська (незабаром)"
   },
   "footer": {
+    "logoMain": "SET",
+    "logoAccent": "AGRO",
     "tagline": "Професійні рішення для агробізнесу: від логістики до високоточного внесення добрив.",
     "navHeading": "Навігація",
     "contactsHeading": "Контакти",
     "socialHeading": "Ми в мережах",
     "copyright": "© {year} SETAGRO. Всі права захищено.",
-    "privacy": "Політика конфіденційності"
+    "privacy": "Політика конфіденційності",
+
+    "footerHrefEmail": "mailto:setagro@gmail.com",
+    "footerHrefPhone": "tel:+38067987654321",
+
+    "email": "setagro@gmail.com",
+    "phone": "+38 (067) 987-65-43-21"
   },
   "Home": {
     "hero": {
@@ -130,6 +141,10 @@
       "subtitle": "Ми завжди готові до співпраці та професійної консультації."
     },
     "infoTitle": "Наші координати",
+
+    "contactPhone": "+38 (067) 987-65-43-21",
+    "contactEmail": "setagro@gmail.com",
+
     "phoneLabel": "Телефон",
     "emailLabel": "Email",
     "addressLabel": "Адреса",

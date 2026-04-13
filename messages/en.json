@@ -13,6 +13,9 @@
     "contacts": "Contacts"
   },
   "header": {
+    "logoMain": "SET",
+    "logoAccent": "AGRO",
+
     "logoAria": "SETAGRO — home",
     "mainNav": "Main navigation",
     "mobileMenu": "Mobile menu",
@@ -23,12 +26,21 @@
     "langRoSoon": "Romanian (coming soon)"
   },
   "footer": {
+    "logoMain": "SET",
+    "logoAccent": "AGRO",
+
     "tagline": "Professional solutions for agribusiness: from logistics to high-precision fertilizer application.",
     "navHeading": "Navigation",
     "contactsHeading": "Contacts",
     "socialHeading": "Follow us",
     "copyright": "© {year} SETAGRO. All rights reserved.",
-    "privacy": "Privacy policy"
+    "privacy": "Privacy policy",
+
+    "footerHrefEmail": "mailto:setagro@gmail.com",
+    "footerHrefPhone": "tel:+38067987654321",
+
+    "email": "setagro@gmail.com",
+    "phone": "+38 (067) 987-65-43-21"
   },
   "Home": {
     "hero": {
@@ -130,6 +142,10 @@
       "subtitle": "We are always open to cooperation and professional consultation."
     },
     "infoTitle": "Our details",
+
+    "contactPhone": "+38 (067) 987-65-43-21",
+    "contactEmail": "setagro@gmail.com",
+
     "phoneLabel": "Phone",
     "emailLabel": "Email",
     "addressLabel": "Address",

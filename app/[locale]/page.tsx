@@ -25,7 +25,7 @@ import "lightgallery/css/lg-video.css";
 import { photosGallery } from "../gallery";
 import { videoGallery } from "../gallery";
 
-import "swiper/css";
+// import "swiper/css";
 import { partners } from "../partners";
 
 type HomeMessages = {
