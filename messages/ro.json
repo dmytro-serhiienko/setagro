@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "SETAGRO — Aplicarea amoniacului anhidru",
-    "description": "Compania SETAGRO oferă servicii de aplicare a amoniacului anhidru ca îngrășământ cu azot pe câmpurile din Ucraina, România, Bulgaria și Moldova."
+    "title": "UKR-PRAT — Aplicarea amoniacului anhidru",
+    "description": "Compania UKR-PRAT oferă servicii de aplicare a amoniacului anhidru ca îngrășământ cu azot pe câmpurile din Ucraina, România, Bulgaria și Moldova."
   },
   "nav": {
     "home": "Acasă",
@@ -235,7 +235,7 @@
   "Vacancies": {
     "hero": {
       "title": "CARIERĂ ÎN",
-      "titleAccent": "SETAGRO",
+      "titleAccent": "UKR-PRAT TRADE",
       "subtitle": "Alăturați-vă echipei de profesioniști și dezvoltați sectorul agricol alături de noi"
     },
     "apply": "Aplică",
@@ -266,7 +266,7 @@
     "updateDate": "Ultima actualizare: 11 aprilie 2026",
     "s1": {
       "title": "1. Dispoziții generale",
-      "text": "Această Politică de confidențialitate stabilește procedura de primire, stocare, procesare și utilizare a datelor cu caracter personal ale utilizatorilor site-ului <site>setagro</site> (în continuare — Site-ul)."
+      "text": "Această Politică de confidențialitate stabilește procedura de primire, stocare, procesare și utilizare a datelor cu caracter personal ale utilizatorilor site-ului <site>ukrprat</site> (în continuare — Site-ul)."
     },
     "s2": {
       "title": "2. Ce date colectăm",
@@ -300,6 +300,6 @@
       "text": "Aveți dreptul de a solicita în orice moment accesul la datele dumneavoastră, corectarea erorilor sau ștergerea completă a informațiilor din baza noastră de date."
     },
     "footerPrefix": "Pentru întrebări legate de confidențialitate, contactați-ne la:",
-    "footerEmail": "ua.setagro@gmail.com"
+    "footerEmail": "ukrprat@gmail.com"
   }
 }
