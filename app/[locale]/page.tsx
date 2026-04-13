@@ -48,9 +48,8 @@ export default function Hero() {
         plugins: [lgThumbnail, lgZoom, lgVideo],
         selector: "a",
         addClass: "lg-custom-thumbnails",
-        appendThumbnailsTo: ".lg-outer",
         animateThumb: false,
-        allowMediaOverlap: true,
+        // showThumbByDefault: false,
         mobileSettings: {
           controls: true,
           showCloseIcon: true,

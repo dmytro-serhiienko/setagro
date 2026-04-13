@@ -424,6 +424,8 @@
   overflow: hidden;
   border-radius: 2px;
   cursor: pointer;
+  border-radius: 10px;
+
   background: #111;
 }
 
@@ -550,6 +552,20 @@
 /* Прогрес-бар */
 .lg-progress-bar .lg-progress {
   background: #fff;
+}
+
+@media (max-width: 768px) {
+  :global(.lg-outer .lg-thumb-outer) {
+    display: none;
+  }
+
+  :global(.lg-outer.lg-thumb-open .lg-img-wrap) {
+    bottom: 0;
+  }
+
+  :global(.lg-outer .lg-image) {
+    max-height: calc(100vh - 96px) !important;
+  }
 }
 
 @media (max-width: 768px) {
