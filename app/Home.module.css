@@ -411,7 +411,7 @@
 .galleryLink {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   display: block;
   background: #122014;
 }

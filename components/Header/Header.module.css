@@ -208,7 +208,7 @@
   width: min(340px, 90vw);
   z-index: 180;
   padding: 95px 0 34px;
-  transform: translateX(100%);
+  transform: translateX(calc(100% + 24px));
   transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   background:
     linear-gradient(
@@ -225,10 +225,12 @@
   box-shadow: -16px 0 42px rgba(10, 25, 11, 0.24);
   overflow-y: auto;
   overflow-x: visible;
+  pointer-events: none;
 }
 
 .drawerOpen {
   transform: translateX(0);
+  pointer-events: auto;
 }
 
 .drawerLink {
