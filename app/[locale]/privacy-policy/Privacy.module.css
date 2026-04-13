@@ -9,8 +9,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #060606;
-  background-image: url("/images/hero/694827723549065f8eb9e509_bg-2.png");
+  background-image:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(120, 190, 32, 0.24),
+      transparent 34%
+    ),
+    linear-gradient(135deg, rgba(7, 20, 11, 0.88), rgba(9, 26, 14, 0.7)),
+    url("/images/hero/694827723549065f8eb9e509_bg-2.png");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -23,8 +29,8 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(4, 12, 8, 0.2) 0%,
+    rgba(7, 20, 11, 0.72) 100%
   );
   z-index: 1;
 }
@@ -50,19 +56,19 @@
 }
 
 .accent {
-  color: #55a630;
+  color: var(--sg-accent);
 }
 
 .heroSubtitle {
   font-size: 16px;
-  color: #aaa;
+  color: rgba(239, 247, 232, 0.82);
 }
 
 /* ─── ТЕКСТОВА СЕКЦІЯ ─── */
 .whiteSection {
-  background-color: #ffffff;
+  background: linear-gradient(180deg, var(--sg-surface) 0%, #eef6e7 100%);
   padding: 60px 0;
-  color: #333;
+  color: #1e3f22;
 }
 
 .textContent {
@@ -72,17 +78,17 @@
 }
 
 .updateDate {
-  color: #888;
+  color: rgba(28, 56, 30, 0.56);
   font-size: 14px;
   margin-bottom: 40px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(120, 170, 89, 0.22);
   padding-bottom: 10px;
 }
 
 .textContent h3 {
   font-family: var(--font-unbounded);
   font-size: 20px;
-  color: #1a1a1a;
+  color: #17351b;
   margin: 35px 0 15px;
 }
 
@@ -104,7 +110,7 @@
 
 .textContent li::before {
   content: "•";
-  color: #55a630;
+  color: var(--sg-accent);
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -114,7 +120,8 @@
 .footerNote {
   margin-top: 50px;
   padding: 20px;
-  background: #f9f9f9;
+  background: linear-gradient(145deg, #f4f9ef, #e5f1dc);
+  border: 1px solid rgba(120, 170, 89, 0.22);
   border-radius: 12px;
   text-align: center;
   display: flex;

@@ -1,5 +1,5 @@
 .main {
-  background: #fff;
+  background: var(--background);
   overflow-x: hidden;
 }
 
@@ -15,8 +15,14 @@
   position: relative;
   min-height: 60vh;
   min-height: 450px;
-  background: url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover
-    no-repeat;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(120, 190, 32, 0.24),
+      transparent 34%
+    ),
+    linear-gradient(135deg, rgba(7, 20, 11, 0.88), rgba(9, 26, 14, 0.7)),
+    url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,8 +35,8 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(26, 26, 26, 0.5)
+    rgba(4, 12, 8, 0.2),
+    rgba(7, 20, 11, 0.62)
   );
 }
 
@@ -49,16 +55,17 @@
 .heroSubtitle {
   position: relative;
   font-size: clamp(14px, 4vw, 20px);
-  opacity: 0.9;
+  color: rgba(239, 247, 232, 0.84);
 }
 
 .section {
   padding: 60px 0;
+  background: linear-gradient(180deg, var(--sg-surface) 0%, #eef6e7 100%);
 }
 
 .darkSection {
   padding: 60px 0;
-  background: var(--sg-dark);
+  background: linear-gradient(165deg, #08150c 0%, #0d2112 58%, #122e18 100%);
   color: white;
 }
 
@@ -74,7 +81,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(85, 166, 48, 0.1);
+  background: rgba(120, 190, 32, 0.12);
   color: var(--sg-accent);
   padding: 6px 14px;
   border-radius: 50px;
@@ -84,7 +91,7 @@
 }
 
 .darkSection .iconLabel {
-  background: rgba(85, 166, 48, 0.2);
+  background: rgba(120, 190, 32, 0.2);
 }
 
 .textContent {
@@ -101,12 +108,12 @@
 .textContent p {
   font-size: 16px;
   line-height: 1.6;
-  color: #555;
+  color: rgba(21, 47, 24, 0.78);
   margin-bottom: 25px;
 }
 
 .darkSection .textContent p {
-  color: #ccc;
+  color: rgba(226, 242, 209, 0.76);
 }
 
 /* ─── КАРТКИ  ─── */
@@ -118,7 +125,8 @@
 }
 
 .brandCard {
-  background: var(--sg-accent-bg);
+  background: linear-gradient(145deg, #f4f9ef, #e5f1dc);
+  border: 1px solid rgba(120, 170, 89, 0.28);
   padding: 15px;
   border-radius: 12px;
   color: var(--sg-dark);
@@ -134,7 +142,7 @@
 
 .brandCard span {
   font-size: 13px;
-  color: #666;
+  color: rgba(25, 54, 28, 0.66);
 }
 
 /* ─── ОБЛАДНАННЯ ─── */
@@ -163,7 +171,8 @@
 .capacityBadge {
   display: block;
   padding: 20px 40px;
-  background: var(--sg-accent-bg);
+  background: linear-gradient(145deg, #f4f9ef, #e5f1dc);
+  border: 1px solid rgba(120, 170, 89, 0.28);
   border-radius: 16px;
   color: var(--sg-dark);
   margin-top: 20px;

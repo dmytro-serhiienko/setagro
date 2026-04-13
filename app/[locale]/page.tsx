@@ -9,6 +9,8 @@ import css from "@/app/Home.module.css";
 import { PiTractorBold, PiTruckTrailerBold } from "react-icons/pi";
 import { MdOutlineScience } from "react-icons/md";
 import { RiTeamLine } from "react-icons/ri";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper/modules";
 
 import lightGallery from "lightgallery";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
@@ -25,7 +27,7 @@ import "lightgallery/css/lg-video.css";
 import { photosGallery } from "../gallery";
 import { videoGallery } from "../gallery";
 
-// import "swiper/css";
+import "swiper/css";
 import { partners } from "../partners";
 
 type HomeMessages = {
@@ -147,7 +149,7 @@ export default function Hero() {
 
       {/* GALLERY */}
       <section className={css.gallerySection} id="gallery">
-        <div className={css.container}>
+        <div className={`${css.container} ${css.galleryContainer}`}>
           <div className={css.textHeader} data-gsap="stagger">
             <h2 className={css.sectionTitle}>
               {t("gallery.title")}{" "}
@@ -156,38 +158,55 @@ export default function Hero() {
             <p className={css.sectionSubtitle}>{t("gallery.subtitle")}</p>
           </div>
 
-          <div
-            id="customize-thumbnails-gallery"
-            ref={galleryRef}
-            className={css.galleryGrid}
-          >
-            {photosGallery.map((el, index) => (
-              <a key={index} href={el.src} className={css.galleryLink}>
-                <Image
-                  src={el.src}
-                  alt={photoAlts[index] ?? el.alt}
-                  width={300}
-                  height={200}
-                  className={css.galleryThumb}
-                />
-              </a>
-            ))}
-            {videoGallery.map((video, index) => (
-              <a
-                key={index}
-                data-lg-size="1280-720"
-                data-src={video.src}
-                data-poster={video.poster}
-              >
-                <Image
-                  src={video.poster}
-                  alt={videoAlts[index] ?? video.alt}
-                  width={300}
-                  height={200}
-                />
-                <span className={css.playIcon}>▶</span>
-              </a>
-            ))}
+          <div id="customize-thumbnails-gallery" ref={galleryRef}>
+            <Swiper
+              className={css.galleryGrid}
+              modules={[FreeMode]}
+              freeMode
+              grabCursor
+              spaceBetween={8}
+              slidesPerView={1.2}
+              breakpoints={{
+                520: { slidesPerView: 1.5, spaceBetween: 10 },
+                768: { slidesPerView: 2.2, spaceBetween: 12 },
+                1080: { slidesPerView: 3.1, spaceBetween: 14 },
+                1480: { slidesPerView: 3.6, spaceBetween: 16 },
+              }}
+            >
+              {photosGallery.map((el, index) => (
+                <SwiperSlide key={`photo-${index}`}>
+                  <a href={el.src} className={css.galleryLink}>
+                    <Image
+                      src={el.src}
+                      alt={photoAlts[index] ?? el.alt}
+                      width={300}
+                      height={200}
+                      className={css.galleryThumb}
+                    />
+                  </a>
+                </SwiperSlide>
+              ))}
+
+              {videoGallery.map((video, index) => (
+                <SwiperSlide key={`video-${index}`}>
+                  <a
+                    className={css.galleryLink}
+                    data-lg-size="1280-720"
+                    data-src={video.src}
+                    data-poster={video.poster}
+                  >
+                    <Image
+                      src={video.poster}
+                      alt={videoAlts[index] ?? video.alt}
+                      width={300}
+                      height={200}
+                      className={css.galleryThumb}
+                    />
+                    <span className={css.playIcon}>▶</span>
+                  </a>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>

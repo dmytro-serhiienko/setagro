@@ -3,160 +3,189 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  background: transparent;
+  z-index: 110;
   border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .scrolled {
-  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
-  background: rgba(13, 22, 11, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(
+    145deg,
+    rgba(9, 22, 13, 0.88),
+    rgba(10, 28, 14, 0.72)
+  );
+  border-color: rgba(194, 236, 148, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 18px 36px rgba(5, 13, 7, 0.42);
 }
 
 .inner {
+  width: min(1420px, 100% - 32px);
   margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 20px;
-  height: 70px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* ── ЛОГОТИП ── */
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
-  font-family: var(--font-unbounded);
-  font-size: 22px;
+  font-family: var(--font-unbounded), sans-serif;
+  font-size: 21px;
   font-weight: 800;
-  letter-spacing: 1px;
-  user-select: none;
-  flex-shrink: 0;
-  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.02em;
+  color: #eff8e8;
+  transition: transform 0.25s ease;
+}
 
-  &:hover {
-    transform: translateY(-3px);
-  }
+.logo:hover {
+  transform: translateY(-2px);
 }
 
 .logo::before {
   content: "";
   display: block;
+  width: 6px;
   height: 6px;
-  width: 5px;
-  margin-right: 8px;
   border-radius: 2px;
-  background-color: var(--sg-accent);
+  margin-right: 10px;
+  background: #8ed636;
   box-shadow:
-    0 -8px 0 0 #134611,
-    0 8px 0 0 #aacc00;
+    0 -9px 0 rgba(179, 242, 102, 0.9),
+    0 9px 0 rgba(82, 147, 28, 0.9);
 }
 
 .logoMain {
-  color: #fff;
-}
-.logoAccent {
-  color: var(--sg-accent);
+  color: #f4fbec;
 }
 
-/* ── МОВИ  ── */
+.logoAccent {
+  color: #9de641;
+}
+
 .langWrap {
   display: flex;
-  gap: 15px;
-  /* margin-left: 10px; */
+  align-items: center;
+  gap: 10px;
 }
 
 .langLink {
-  font-family: var(--font-inter);
-  color: #fff;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 999px;
   text-decoration: none;
   font-size: 10px;
-  font-weight: 600;
-  transition: opacity 0.2s;
-  display: flex;
-  flex-direction: column;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #f1fbe8;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(207, 236, 175, 0.2);
+  position: relative;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
 }
 
-.langLink:hover {
-  opacity: 0.7;
+.langLink:hover,
+.langLink[aria-current="page"] {
+  transform: translateY(-1px);
+  background: rgba(167, 239, 73, 0.2);
+  border-color: rgba(177, 238, 105, 0.7);
 }
 
 .langDot {
-  color: var(--sg-accent);
-  font-size: 8px;
-  line-height: 1;
+  display: none;
 }
 
 .desktopNav {
   display: none;
   align-items: center;
-  gap: 35px;
+  gap: 28px;
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 26px;
 }
 
 .navLink {
-  font-family: var(--font-inter);
-  color: #fff;
+  position: relative;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  transition: all 0.3s ease-in-out;
-  white-space: nowrap;
+  color: rgba(240, 249, 233, 0.88);
+  transition: color 0.25s ease;
+}
 
-  &:hover {
-    color: var(--sg-accent);
-    transform: translateY(-3px);
-  }
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8dd636, #baf468);
+  transition: transform 0.25s ease;
+}
+
+.navLink:hover {
+  color: #f5fde9;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
 }
 
 .ctaButton {
   display: none;
-  padding: 12px 24px;
-  background: var(--sg-accent);
-  color: #fff;
   text-decoration: none;
-  font-family: var(--font-inter);
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #0b250f;
+  background: linear-gradient(140deg, #b0f35a, #7dc424);
+  box-shadow:
+    0 10px 22px rgba(93, 151, 33, 0.34),
+    inset 0 -1px 0 rgba(11, 37, 15, 0.22);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .ctaButton:hover {
-  background: #468a27;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 26px rgba(93, 151, 33, 0.4),
+    inset 0 -1px 0 rgba(11, 37, 15, 0.22);
 }
 
-/* ── МОБІЛЬНЕ МЕНЮ (Бургер) ── */
 .burger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   cursor: pointer;
-  z-index: 101;
-  color: #fff;
+  color: #f4fbe8;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(211, 240, 178, 0.26);
 }
 
-@media (min-width: 1024px) {
-  .inner {
-    justify-content: flex-start;
-  }
-
+@media (min-width: 1040px) {
   .desktopNav,
   .ctaButton {
     display: flex;
@@ -167,7 +196,7 @@
   }
 
   .langWrap {
-    margin-left: 30px;
+    margin-left: 24px;
   }
 }
 
@@ -176,22 +205,26 @@
   top: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  max-width: 300px;
-  background: var(--background);
-  z-index: 150;
-  display: flex;
-  flex-direction: column;
-  padding: 100px 0 40px 0;
+  width: min(340px, 90vw);
+  z-index: 180;
+  padding: 95px 0 34px;
   transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-/* Коли drawer закрито — скидаємо стан посилань */
-.drawer:not(.drawerOpen) .drawerLink {
-  opacity: 0;
-  transform: translateX(30px);
-  animation: none;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  background:
+    linear-gradient(
+      165deg,
+      rgba(242, 250, 235, 0.98),
+      rgba(226, 241, 214, 0.95)
+    ),
+    radial-gradient(
+      circle at 92% 14%,
+      rgba(128, 198, 46, 0.25),
+      transparent 46%
+    );
+  border-left: 1px solid rgba(116, 167, 65, 0.24);
+  box-shadow: -16px 0 42px rgba(10, 25, 11, 0.24);
+  overflow-y: auto;
+  overflow-x: visible;
 }
 
 .drawerOpen {
@@ -201,57 +234,77 @@
 .drawerLink {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 32px;
-  color: var(--foreground);
+  gap: 14px;
   text-decoration: none;
-  font-family: var(--font-inter);
-  font-size: 18px;
+  padding: 14px 30px;
+  font-size: 17px;
   font-weight: 500;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #173119;
+  border-bottom: 1px solid rgba(76, 120, 36, 0.12);
   opacity: 0;
-  transform: translateX(30px);
-  animation: drawerLinkIn 0.4s ease forwards;
-  transition:
-    color 0.2s,
-    background 0.2s;
+  transform: translateX(20px);
+  animation: drawerLinkIn 0.35s ease forwards;
+  transition: background 0.2s ease;
 }
 
 .drawerLink:hover {
-  color: var(--foreground);
-  background: rgba(82, 82, 82, 0.1);
+  background: rgba(139, 204, 58, 0.14);
 }
 
 .drawerIndex {
-  font-family: var(--font-inter);
   font-size: 11px;
   font-weight: 700;
-  color: var(--sg-accent);
-  letter-spacing: 1px;
-  min-width: 22px;
+  color: #5c9f20;
+  letter-spacing: 0.08em;
+  min-width: 23px;
 }
 
 .drawerFooter {
   margin-top: auto;
-  padding: 0 32px;
+  padding: 18px 30px calc(14px + env(safe-area-inset-bottom));
 }
 
 .ctaMobile {
   display: block;
   text-align: center;
-  padding: 14px 24px;
-  background: var(--sg-accent);
-  color: #fff;
   text-decoration: none;
-  font-family: var(--font-inter);
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 10px;
-  transition: background 0.2s;
+  border-radius: 999px;
+  padding: 13px 20px;
+  color: #0c2610;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: linear-gradient(140deg, #b0f35a, #7dc424);
+  box-shadow:
+    0 10px 22px rgba(82, 130, 30, 0.28),
+    inset 0 -1px 0 rgba(8, 25, 10, 0.2);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
 }
 
 .ctaMobile:hover {
-  background: var(--sg-accent-hover);
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 24px rgba(82, 130, 30, 0.34),
+    inset 0 -1px 0 rgba(8, 25, 10, 0.2);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 170;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  background: rgba(4, 10, 5, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @keyframes drawerLinkIn {
@@ -259,20 +312,4 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  z-index: 140;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
-
-.overlayVisible {
-  opacity: 1;
-  pointer-events: auto;
 }

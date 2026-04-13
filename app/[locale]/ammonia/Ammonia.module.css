@@ -1,5 +1,5 @@
 .main {
-  background: #ffffff;
+  background: var(--background);
   color: var(--sg-dark);
 }
 
@@ -16,7 +16,14 @@
   position: relative;
   min-height: 60vh;
   min-height: 450px;
-  background: url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(120, 190, 32, 0.24),
+      transparent 34%
+    ),
+    linear-gradient(135deg, rgba(7, 20, 11, 0.88), rgba(9, 26, 14, 0.7)),
+    url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,8 +36,8 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(26, 26, 26, 0.5)
+    rgba(4, 12, 8, 0.2),
+    rgba(7, 20, 11, 0.62)
   );
 }
 
@@ -44,14 +51,14 @@
 }
 .heroSubtitle {
   font-size: 20px;
-  opacity: 0.8;
+  color: rgba(239, 247, 232, 0.84);
   letter-spacing: 1px;
 }
 
 /* Advantages */
 .advantagesSection {
   padding: 100px 0;
-  background: #fcfcfc;
+  background: linear-gradient(180deg, var(--sg-surface) 0%, #f0f7ea 100%);
 }
 
 .sectionTitle {
@@ -59,6 +66,7 @@
   font-family: var(--font-unbounded);
   font-size: 32px;
   margin-bottom: 60px;
+  color: #17351b;
 }
 
 .advantagesGrid {
@@ -68,10 +76,11 @@
 }
 
 .advCard {
-  background: white;
+  background: linear-gradient(145deg, #ffffff, #eef7e8);
   padding: 40px 30px;
   border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(120, 170, 89, 0.26);
+  box-shadow: 0 14px 34px rgba(13, 38, 17, 0.1);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -80,7 +89,7 @@
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 18px 42px rgba(15, 44, 18, 0.16);
   }
 }
 
@@ -98,7 +107,7 @@
 }
 
 .advCard p {
-  color: #666;
+  color: rgba(24, 54, 29, 0.78);
   line-height: 1.6;
   font-size: 15px;
 }
@@ -106,6 +115,7 @@
 /* Chart Section */
 .chartSection {
   padding: 100px 0;
+  background: linear-gradient(180deg, #f4faef 0%, #edf6e6 100%);
 }
 
 .chartContent {
@@ -119,12 +129,13 @@
   font-family: var(--font-unbounded);
   font-size: 32px;
   margin-bottom: 25px;
+  color: #18361c;
 }
 
 .chartText p {
   font-size: 18px;
   line-height: 1.8;
-  color: #444;
+  color: rgba(21, 47, 24, 0.8);
   margin-bottom: 30px;
 }
 
@@ -137,15 +148,17 @@
   background: var(--sg-accent-bg);
   padding: 10px 20px;
   border-radius: 12px;
-  color: #2d5a1a;
+  border: 1px solid rgba(120, 170, 89, 0.25);
+  color: #1d431e;
   font-size: 16px;
 }
 
 .chartImageWrapper {
-  background: white;
+  background: linear-gradient(145deg, #ffffff, #eef7e8);
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(120, 170, 89, 0.25);
+  box-shadow: 0 20px 44px rgba(13, 38, 17, 0.12);
 }
 .chartImg {
   width: 100%;
@@ -156,7 +169,7 @@
 /* Season Section */
 .seasonSection {
   padding: 100px 0;
-  background: var(--sg-dark);
+  background: linear-gradient(165deg, #08150c 0%, #0d2112 58%, #122e18 100%);
   color: white;
 }
 
@@ -174,10 +187,14 @@
 }
 
 .seasonCard {
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
   padding: 50px;
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(180, 235, 108, 0.2);
   text-align: center;
 
   display: flex;
@@ -187,7 +204,7 @@
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 18px 40px rgba(5, 14, 8, 0.36);
   }
 }
 
@@ -214,7 +231,7 @@
 }
 
 .seasonCard p {
-  color: #aaa;
+  color: rgba(226, 242, 209, 0.76);
   font-size: 17px;
   line-height: 1.6;
 }
@@ -223,7 +240,7 @@
 .techSection {
   padding: 120px 0;
   text-align: center;
-  background: #000;
+  background: linear-gradient(165deg, #060f08 0%, #0c1d10 100%);
   color: white;
 }
 
@@ -233,10 +250,10 @@
   justify-content: center;
   width: 100px;
   height: 100px;
-  background: rgba(85, 166, 48, 0.1);
+  background: rgba(120, 190, 32, 0.14);
   border-radius: 50%;
   margin-bottom: 30px;
-  border: 1px solid rgba(85, 166, 48, 0.3);
+  border: 1px solid rgba(177, 238, 105, 0.32);
 }
 
 .iconWrapper svg {
@@ -253,7 +270,7 @@
 .techCard p {
   max-width: 800px;
   margin: 0 auto;
-  color: #999;
+  color: rgba(228, 242, 213, 0.72);
   font-size: 18px;
   line-height: 1.8;
 }

@@ -10,8 +10,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #060606;
-  background-image: url("/images/hero/694827723549065f8eb9e509_bg-2.png");
+  background-image:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(120, 190, 32, 0.24),
+      transparent 34%
+    ),
+    linear-gradient(135deg, rgba(7, 20, 11, 0.88), rgba(9, 26, 14, 0.7)),
+    url("/images/hero/694827723549065f8eb9e509_bg-2.png");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -24,8 +30,8 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(4, 12, 8, 0.2) 0%,
+    rgba(7, 20, 11, 0.72) 100%
   );
   z-index: 1;
 }
@@ -47,19 +53,19 @@
 }
 
 .accent {
-  color: #55a630; /* Ваш зелений */
+  color: var(--sg-accent);
 }
 
 .heroSubtitle {
   font-size: clamp(14px, 3vw, 18px);
-  color: #aaa;
+  color: rgba(239, 247, 232, 0.82);
   max-width: 600px;
   margin: 0 auto;
 }
 
 /* ─── БІЛА СЕКЦІЯ ─── */
 .whiteSection {
-  background-color: #ffffff;
+  background: linear-gradient(180deg, var(--sg-surface) 0%, #eef6e7 100%);
   padding: 60px 0;
 }
 
@@ -68,7 +74,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #55a630;
+  background: linear-gradient(130deg, #a7ef49 0%, #78be20 100%);
   color: #ffffff;
   border: none;
   padding: 14px 28px;
@@ -84,9 +90,9 @@
 }
 
 .applyBtn:hover {
-  background-color: #468a27;
+  background: linear-gradient(130deg, #97dc45 0%, #6eb01d 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(85, 166, 48, 0.3);
+  box-shadow: 0 6px 20px rgba(85, 166, 48, 0.36);
 }
 
 .applyBtn:active {
@@ -95,8 +101,8 @@
 
 /* ─── КАРТКИ ВАКАНСІЙ ─── */
 .jobCard {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: linear-gradient(145deg, #ffffff, #eef7e8);
+  border: 1px solid rgba(120, 170, 89, 0.24);
   padding: 25px;
   border-radius: 16px;
   display: flex;
@@ -107,18 +113,19 @@
 }
 
 .jobCard:hover {
-  border-color: #55a630;
+  border-color: rgba(120, 190, 32, 0.5);
+  box-shadow: 0 14px 30px rgba(13, 38, 17, 0.12);
 }
 
 .info h3 {
   font-size: 20px;
-  color: #1a1a1a;
+  color: #17351b;
   margin-bottom: 8px;
   font-weight: 700;
 }
 
 .location {
-  color: #55a630;
+  color: var(--sg-accent);
   font-size: 14px;
   font-weight: 600;
   display: flex;

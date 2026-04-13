@@ -1,5 +1,5 @@
 .main {
-  background: #ffffff;
+  background: var(--background);
 }
 
 /* Hero */
@@ -7,7 +7,14 @@
   position: relative;
   min-height: 60vh;
   min-height: 450px;
-  background: url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(120, 190, 32, 0.24),
+      transparent 34%
+    ),
+    linear-gradient(135deg, rgba(7, 20, 11, 0.88), rgba(9, 26, 14, 0.7)),
+    url("/images/hero/694827723549065f8eb9e509_bg-2.png") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,8 +27,8 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(26, 26, 26, 0.5)
+    rgba(4, 12, 8, 0.2),
+    rgba(7, 20, 11, 0.62)
   );
 }
 
@@ -44,12 +51,13 @@
 }
 .heroSubtitle {
   font-size: 18px;
-  color: #ccc;
+  color: rgba(239, 247, 232, 0.84);
 }
 
 /* Content Section */
 .contentSection {
   padding: 100px 0;
+  background: linear-gradient(180deg, var(--sg-surface) 0%, #eef6e7 100%);
 }
 .grid {
   display: grid;
@@ -63,6 +71,7 @@
   font-family: var(--font-unbounded);
   font-size: 32px;
   margin-bottom: 40px;
+  color: #17351b;
 }
 .contactItem {
   display: flex;
@@ -73,7 +82,8 @@
 .iconBox {
   width: 60px;
   height: 60px;
-  background: #f0f4ef;
+  background: linear-gradient(145deg, #f4f9ef, #e5f1dc);
+  border: 1px solid rgba(120, 170, 89, 0.28);
   color: var(--sg-accent);
   border-radius: 16px;
   display: flex;
@@ -84,7 +94,7 @@
 .contactItem h4 {
   font-family: var(--font-unbounded);
   font-size: 14px;
-  color: #888;
+  color: rgba(28, 56, 30, 0.56);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
@@ -96,11 +106,12 @@
 
 /* Form Side */
 .formSide {
-  background: var(--sg-dark);
+  background: linear-gradient(165deg, #08150c 0%, #0d2112 58%, #122e18 100%);
   padding: 50px;
   border-radius: 10px;
   color: white;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(180, 235, 108, 0.2);
+  box-shadow: 0 20px 40px rgba(7, 20, 11, 0.28);
 }
 .formSide h3 {
   font-family: var(--font-unbounded);
@@ -132,7 +143,7 @@
 .submitBtn {
   width: 100%;
   padding: 18px;
-  background: var(--sg-accent);
+  background: linear-gradient(130deg, #a7ef49 0%, #78be20 100%);
   color: white;
   border: none;
   border-radius: 12px;
@@ -146,7 +157,7 @@
   transition: 0.3s;
 }
 .submitBtn:hover {
-  background: var(--sg-accent-hover);
+  background: linear-gradient(130deg, #97dc45 0%, #6eb01d 100%);
   transform: translateY(-2px);
 }
 .statusMsg {
