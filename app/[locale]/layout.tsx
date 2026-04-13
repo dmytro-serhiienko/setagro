@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import "@/app/globals.css";
 import { Inter, Unbounded } from "next/font/google";
 import Header from "@/components/Header/Header";
@@ -15,6 +16,7 @@ import {
 } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import IntroWrapper from "@/components/ui/Intro/Start";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -65,18 +67,24 @@ export default async function RootLayout({ children, params }: Props) {
       suppressHydrationWarning
       className={`${inter.variable} ${unbounded.variable} antialiased`}
     >
-      <link rel="shortcut icon" href="/images/fav.png" type="image/x-icon" />
+      <link
+        rel="shortcut icon"
+        href="/images/favicon.png"
+        type="image/x-icon"
+      />
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          <SmoothScroll>
-            <GsapInit />
-            <main>{children}</main>
-            <Footer />
-          </SmoothScroll>
-          <ScrollTop />
-          <Toaster position="bottom-right" richColors />
-        </NextIntlClientProvider>
+        <IntroWrapper>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Header />
+            <SmoothScroll>
+              <GsapInit />
+              <main>{children}</main>
+              <Footer />
+            </SmoothScroll>
+            <ScrollTop />
+            <Toaster position="bottom-right" richColors />
+          </NextIntlClientProvider>
+        </IntroWrapper>
       </body>
     </html>
   );

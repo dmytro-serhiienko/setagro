@@ -1,0 +1,64 @@
+/* IntroLoader.module.css */
+
+.wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #edf7e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease;
+}
+
+.leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Scene: plant + bar side by side */
+.scene {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.svg {
+  width: clamp(100px, 16vw, 160px);
+  height: clamp(160px, 26vw, 220px);
+}
+
+/* Vertical progress bar */
+.barWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 4px;
+}
+
+.barTrack {
+  width: 4px;
+  height: clamp(120px, 20vw, 176px);
+  border-radius: 999px;
+  background: rgba(90, 158, 26, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.barFill {
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #9ce63e 0%, #5a9e1a 100%);
+  transition: height 0.1s linear;
+}
+
+.percent {
+  font-family: "Unbounded", monospace, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #4e8f18;
+  letter-spacing: 0.06em;
+}

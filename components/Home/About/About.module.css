@@ -1,0 +1,123 @@
+.aboutSection {
+  position: relative;
+  padding: 76px 20px 34px;
+  overflow: hidden;
+}
+
+.aboutSection::before {
+  content: "";
+  position: absolute;
+  inset: 8% auto auto -120px;
+  width: 320px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(151, 227, 61, 0.2), transparent 72%);
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+.aboutContainer {
+  position: relative;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 34px;
+  padding: 28px;
+  border-radius: 28px;
+  background:
+    linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(245, 251, 239, 0.78)
+    ),
+    radial-gradient(circle at 88% 8%, rgba(120, 190, 32, 0.16), transparent 40%);
+}
+
+.aboutHeader {
+  align-self: center;
+}
+
+.aboutBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-unbounded), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4d8f1a;
+  margin-bottom: 14px;
+}
+
+.aboutBadge::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+}
+
+.aboutTitle {
+  font-family: var(--font-unbounded), sans-serif;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.06;
+  color: #142a15;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.aboutDivider {
+  width: 92px;
+  height: 6px;
+  margin-top: 22px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6aae28, #b4ee60);
+}
+
+.aboutContent {
+  display: grid;
+  gap: 18px;
+}
+
+.aboutText {
+  position: relative;
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.75;
+  color: #244127;
+  padding-left: 18px;
+}
+
+.aboutText::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6eb52b;
+  box-shadow: 0 0 0 5px rgba(120, 190, 32, 0.16);
+}
+
+.aboutText strong {
+  color: #173a16;
+}
+
+@media (min-width: 1080px) {
+  .aboutSection {
+    padding: 86px 34px 44px;
+  }
+
+  .aboutContainer {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 44px;
+    padding: 40px 48px;
+  }
+
+  .aboutTitle {
+    font-size: clamp(24px, 2.5vw, 34px);
+    white-space: nowrap;
+  }
+}
