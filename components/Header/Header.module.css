@@ -263,11 +263,12 @@
 
 .drawerFooter {
   margin-top: auto;
-  padding: 18px 30px calc(14px + env(safe-area-inset-bottom));
+  padding-bottom: calc(18px + env(safe-area-inset-bottom));
 }
 
 .ctaMobile {
   display: block;
+  margin: 28px 40px 0;
   text-align: center;
   text-decoration: none;
   border-radius: 999px;

@@ -730,7 +730,7 @@
   }
 
   .title {
-    font-size: clamp(26px, 8.4vw, 34px);
+    font-size: clamp(24px, 7vw, 31px);
     line-height: 1.08;
     text-wrap: normal;
     letter-spacing: -0.01em;

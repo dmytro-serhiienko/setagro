@@ -101,6 +101,7 @@ export default function Header() {
         aria-hidden="true"
       />
 
+      {/* Бокове меню */}
       <div
         className={`${css.drawer} ${menuOpen ? css.drawerOpen : ""}`}
         role="dialog"
