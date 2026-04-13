@@ -167,10 +167,10 @@ export default function Hero() {
               spaceBetween={8}
               slidesPerView={1.2}
               breakpoints={{
-                520: { slidesPerView: 1.5, spaceBetween: 10 },
-                768: { slidesPerView: 2.2, spaceBetween: 12 },
-                1080: { slidesPerView: 3.1, spaceBetween: 14 },
-                1480: { slidesPerView: 3.6, spaceBetween: 16 },
+                520: { slidesPerView: 1.5, spaceBetween: 7 },
+                768: { slidesPerView: 2.2, spaceBetween: 9 },
+                1080: { slidesPerView: 3.1, spaceBetween: 11 },
+                1480: { slidesPerView: 3.6, spaceBetween: 13 },
               }}
             >
               {photosGallery.map((el, index) => (
