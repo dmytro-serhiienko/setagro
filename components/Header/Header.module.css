@@ -165,6 +165,10 @@
   .burger {
     display: none;
   }
+
+  .langWrap {
+    margin-left: 30px;
+  }
 }
 
 .drawer {

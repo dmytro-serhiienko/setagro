@@ -32,6 +32,7 @@ export default function AmmoniaPage() {
           <h2 className={css.sectionTitle} data-gsap="fade-up">
             {t("advantagesTitle")}
           </h2>
+
           <div className={css.advantagesGrid} data-gsap="stagger">
             <div className={css.advCard}>
               <div className={css.advIcon}>
