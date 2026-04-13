@@ -617,10 +617,10 @@
   .imageWrapper {
     display: block;
     position: absolute;
-    right: -2vw;
+    right: -6vw;
     bottom: 0;
-    width: 50vw;
-    height: 96vh;
+    width: 60vw;
+    height: 100vh;
 
     object-fit: contain;
     object-position: right bottom;
