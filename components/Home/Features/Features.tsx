@@ -47,16 +47,11 @@ import {
 } from "swiper/modules";
 import { useTranslations } from "next-intl";
 
-// Іконки
 import { PiTractorBold, PiTruckTrailerBold } from "react-icons/pi";
 import { MdOutlineScience } from "react-icons/md";
 import { RiTeamLine, RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 
-// Стилі Swiper
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 
 import css from "./Features.module.css";
 
@@ -134,8 +129,6 @@ export default function Features() {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Панель керування під слайдером */}
         </div>
       </div>
     </section>
