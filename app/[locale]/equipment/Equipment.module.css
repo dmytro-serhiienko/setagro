@@ -10,7 +10,6 @@
   padding: 0 20px;
 }
 
-/* ─── HERO SECTION ─── */
 .hero {
   position: relative;
   min-height: 60vh;
@@ -76,7 +75,6 @@
   align-items: center;
 }
 
-/* ─── КОНТЕНТ ─── */
 .iconLabel {
   display: inline-flex;
   align-items: center;
@@ -116,7 +114,6 @@
   color: rgba(226, 242, 209, 0.76);
 }
 
-/* ─── КАРТКИ  ─── */
 .brandGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -145,7 +142,6 @@
   color: rgba(25, 54, 28, 0.66);
 }
 
-/* ─── ОБЛАДНАННЯ ─── */
 .featureList {
   list-style: none;
   padding: 0;
@@ -167,7 +163,6 @@
   flex-shrink: 0;
 }
 
-/* ─── ЛОГІСТИКА ─── */
 .capacityBadge {
   display: block;
   padding: 20px 40px;
@@ -186,7 +181,6 @@
   margin-top: 5px;
 }
 
-/* ─── ЗОБРАЖЕННЯ ─── */
 .imageSide {
   width: 100%;
   order: -1;

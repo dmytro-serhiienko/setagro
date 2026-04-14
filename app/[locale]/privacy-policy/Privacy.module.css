@@ -2,7 +2,6 @@
   width: 100%;
 }
 
-/* ─── HERO ─── */
 .hero {
   position: relative;
   min-height: 40vh;
@@ -64,7 +63,7 @@
   color: rgba(239, 247, 232, 0.82);
 }
 
-/* ─── ТЕКСТОВА СЕКЦІЯ ─── */
+/*  ТЕКСТОВА СЕКЦІЯ  */
 .whiteSection {
   background: linear-gradient(180deg, var(--sg-surface) 0%, #eef6e7 100%);
   padding: 60px 0;

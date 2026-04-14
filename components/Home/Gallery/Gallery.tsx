@@ -15,8 +15,8 @@ import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-video.css";
 import "swiper/css";
 
-import { photosGallery, videoGallery } from "@/app/gallery"; // перевір шлях
-import css from "./Gallery.module.css";
+import { photosGallery, videoGallery } from "./galleryData";
+import css from "@/components/Home/Gallery/Gallery.module.css";
 
 type HomeMessages = {
   Home: {
