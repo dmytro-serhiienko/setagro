@@ -1,4 +1,4 @@
-.featuresSection {
+/* .featuresSection {
   position: relative;
   padding: 0 20px 20px;
   margin-top: -58px;
@@ -100,5 +100,138 @@
   .featureItem svg {
     width: 40px;
     height: 40px;
+  }
+} */
+.featuresSection {
+  background-color: transparent;
+  margin-top: -50px;
+  margin-bottom: -140px;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 0 20px; */
+}
+
+/* Обмежуємо ширину обгортки, щоб візуально відсікти зайве */
+.sliderWrapper {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.mySwiper {
+  width: 100%;
+  padding: 50px 0 !important;
+  /* Дозволяємо слайдам виходити за межі самого Swiper, 
+     але вони обріжуться об sliderWrapper */
+  overflow: visible !important;
+}
+
+.slide {
+  width: 300px; /* Фіксована ширина, як і раніше */
+  height: 300px;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+
+  /* Всі слайди, які не є активними або сусідніми, стають повністю невидимими */
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Робимо видимими тільки активний, наступний та попередній слайди (разом 3) */
+:global(.swiper-slide-active),
+:global(.swiper-slide-next),
+:global(.swiper-slide-prev) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card {
+  background: #fdfdfd;
+  /* border: 1px solid #eee; */
+  border-radius: 32px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+
+:global(.swiper-slide-prev) .card {
+  transform: translateY(-18px) scale(0.97);
+}
+
+:global(.swiper-slide-next) .card {
+  transform: translateY(18px) scale(0.97);
+}
+
+:global(.swiper-slide-active) .card {
+  border-color: #55a630;
+  background: #fff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  transform: translateY(0) scale(1.05);
+}
+
+.iconBox {
+  color: #55a630;
+  margin-bottom: 25px;
+}
+
+.bigNumber {
+  display: block;
+  font-family: var(--font-unbounded);
+  font-size: 56px;
+  color: #55a630;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+:global(.swiper-pagination-bullet) {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background: #55a630 !important;
+  width: 25px;
+  border-radius: 5px;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .slide {
+    width: 280px;
+  }
+  .sliderWrapper {
+    max-width: 100%;
+  }
+
+  .featuresSection {
+    margin-top: -50px;
+    margin-bottom: -240px;
   }
 }
