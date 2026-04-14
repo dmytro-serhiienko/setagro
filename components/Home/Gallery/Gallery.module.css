@@ -1,3 +1,4 @@
+/* --- Базові стилі (Mobile First) --- */
 .container {
   position: relative;
   z-index: 2;
@@ -44,7 +45,11 @@
 }
 
 .galleryGrid {
-  padding: 0 0 10px !important;
+  padding: 0 !important; /* Значення для мобільних */
+}
+
+.galleryGrid :global(.swiper-slide) {
+  height: auto;
 }
 
 .galleryLink {
@@ -53,6 +58,12 @@
   display: block;
   background: #122014;
   border-radius: 2px;
+
+  filter: grayscale(1) blur(3px);
+
+  &:hover {
+    filter: grayscale(0) blur(0);
+  }
 }
 
 .galleryLink::before {
@@ -66,20 +77,12 @@
   z-index: 1;
 }
 
-.galleryLink:hover::before {
-  opacity: 1;
-}
-
 .galleryThumb {
   width: 100%;
-  height: clamp(220px, 30vw, 380px);
+  height: 390px; /* Базова висота для мобільних */
   object-fit: cover;
   display: block;
   transition: transform 0.45s ease;
-}
-
-.galleryLink:hover .galleryThumb {
-  transform: scale(1.08);
 }
 
 .playIcon {
@@ -88,13 +91,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 58px;
-  height: 58px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   color: #112a13;
-  font-size: 18px;
+  font-size: 13px;
   background: linear-gradient(140deg, #b5f15e 0%, #78be20 100%);
   box-shadow: 0 14px 28px rgba(18, 42, 19, 0.36);
   transition:
@@ -102,15 +105,21 @@
     box-shadow 0.25s ease;
 }
 
+/* --- Hover ефекти --- */
+.galleryLink:hover::before {
+  opacity: 1;
+}
+
+.galleryLink:hover .galleryThumb {
+  transform: scale(1.08);
+}
+
 .galleryLink:hover .playIcon {
   transform: translate(-50%, -50%) scale(1.09);
   box-shadow: 0 18px 32px rgba(18, 42, 19, 0.4);
 }
 
-.galleryGrid :global(.swiper-slide) {
-  height: auto;
-}
-
+/* --- LightGallery Global --- */
 :global(.lg-backdrop) {
   background-color: rgba(4, 8, 5, 0.94) !important;
 }
@@ -130,12 +139,35 @@
   background: #a8ea4d;
 }
 
-@media (max-width: 768px) {
-  :global(.lg-outer .lg-thumb-outer) {
-    display: none !important;
+:global(.lg-outer .lg-thumb-outer) {
+  display: none !important; /* Приховано для малих екранів */
+}
+
+/* --- Tablets (від 520px) --- */
+@media (min-width: 521px) {
+  .galleryGrid {
+    padding: 0 0 10px !important;
+  }
+
+  .galleryThumb {
+    height: clamp(220px, 30vw, 380px);
+  }
+
+  .playIcon {
+    width: 58px;
+    height: 58px;
+    font-size: 18px;
   }
 }
 
+/* --- Desktop (від 768px) --- */
+@media (min-width: 768px) {
+  :global(.lg-outer .lg-thumb-outer) {
+    display: block !important;
+  }
+}
+
+/* --- Large Desktop (від 1080px) --- */
 @media (min-width: 1080px) {
   .gallerySection {
     padding: 62px 0 90px;
@@ -152,22 +184,6 @@
   }
 
   .galleryThumb {
-    height: clamp(300px, 24vw, 430px);
-  }
-}
-
-@media (max-width: 520px) {
-  .galleryGrid {
-    padding: 0 !important;
-  }
-
-  .galleryThumb {
-    height: 190px;
-  }
-
-  .playIcon {
-    width: 42px;
-    height: 42px;
-    font-size: 13px;
+    height: clamp(500px, 34vw, 530px);
   }
 }
